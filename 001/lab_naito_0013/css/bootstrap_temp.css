@@ -39,14 +39,26 @@
   -webkit-box-flex: 1;
   flex: 1;
 }
+
 @media (min-width: 768px) {
   .flex-md-equal > * {
     -ms-flex: 1;
     -webkit-box-flex: 1;
     flex: 1;
   }
+
+  #course div:nth-child(2){
+    flex-direction: row-reverse;
+  }
+
   .navbar-light .navbar-brand {
     width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  #course div{
+    flex-direction: column;
   }
 }
 
