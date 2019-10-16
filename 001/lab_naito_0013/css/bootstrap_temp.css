@@ -12,6 +12,8 @@
   */
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  
+  z-index: 49;
 }
 .site-header a {
   color: #999;

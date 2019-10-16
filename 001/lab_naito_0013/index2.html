@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <!-- 最初の設定は終わっています　必要な方は触ってください -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>チーズアカデミー</title>
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <!-- Reset CSS END -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-    <!-- Bootstrap CSS END -->
-    <!-- Custom styles for this template -->
-    <link href="css/bootstrap_temp.css" rel="stylesheet" />
-    <!-- Custom styles for this template END-->
-    <!-- slick css -->
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <!-- slick css END -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>チーズアカデミー</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- Reset CSS END -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+  <!-- Bootstrap CSS END -->
+  <!-- Custom styles for this template -->
+  <link href="css/bootstrap_temp.css" rel="stylesheet" />
+  <!-- Custom styles for this template END-->
+  <!-- slick css -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <!-- slick css END -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
 
-  <body>
-    <!-- この中に記述していく -->
-    <!-- ここから下にコードを書く -->
+<body>
+  <!-- この中に記述していく -->
+  <!-- ここから下にコードを書く -->
 
-    <div class="loader-wrap"><div class="loader"></div></div>
+  <div class="loader-wrap"><div class="loader"></div></div>
 
-    <header class="container site-header sticky-top py-1">
+  <div class="container wrapper">
+    <header class="container-fluid site-header sticky-top py-1">
       <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="#" ><img src="img/header_logo.png" alt="ロゴ" /></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"aria-label="Toggle navigation" >
@@ -57,7 +58,7 @@
       </nav>
     </header>
 
-    <main class="wrapper">
+    <main class="row">
       <section id="mv" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 font-weight-normal">
@@ -195,10 +196,7 @@
         <button class="btn"><a href="#">MORE</a></button>
       </section>
 
-      <section
-        id="access"
-        class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
-      >
+      <section id="access" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
         <h1>Access</h1>
         <h2>会社情報</h2>
         <div class="mr-md-3">
@@ -295,45 +293,45 @@
         </div>
       </section>
     </main>
+  </div>
 
-    <footer class="containor-fluid">
-      <small>copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.</small>
-    </footer>
-    <div class="bot">
-      <a class="js-modal-open" href=""
-        ><img src="img/chatIcon.png" alt="アイコン"
-      /></a>
-    </div>
-    <div class="modal js-modal">
-      <div class="modal__content">
-        <a class="js-modal-close xbtn" href="">X</a>
-        <article class="chatbot">
-          <div class="img"><img src="img/chatBot.png" alt="チーアカ君" /></div>
-          <div class="question">
-            <h2>なんでも聞いてね？</h2>
-            <p><textarea name="" id="" cols="50" rows="3"></textarea></p>
-            <input type="submit" value="送信" class="btn" />
-          </div>
-          <a class="js-modal-close close" href="">CLOSE</a>
-        </article>
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-      <!--modal__inner-->
-    </div>
-    <!--modal-->
+  <footer class="containor-fluid">
+    <small>copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.</small>
+  </footer>
 
-    <!-- ここから上にコードを書く -->
-    <!-- この中に記述していく -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- JQerey Match Height -->
-    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
-    <!-- JQerey Match Height END -->
-    <!-- Bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous" ></script>
-    <!-- Bootstrap js END -->
-    <!-- slick js -->
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <!-- slick js END -->
-    <script src="js/main.js"></script>
-  </body>
+  <div class="bot">
+    <a class="js-modal-open" href="" ><img src="img/chatIcon.png" alt="アイコン" /></a>
+  </div>
+  <div class="modal js-modal">
+    <div class="modal__content">
+      <a class="js-modal-close xbtn" href="">X</a>
+      <article class="chatbot">
+        <div class="img"><img src="img/chatBot.png" alt="チーアカ君" /></div>
+        <div class="question">
+          <h2>なんでも聞いてね？</h2>
+          <p><textarea name="" id="" cols="50" rows="3"></textarea></p>
+          <input type="submit" value="送信" class="btn" />
+        </div>
+        <a class="js-modal-close close" href="">CLOSE</a>
+      </article>
+    </div>
+    <div class="modal__bg js-modal-close"></div>
+    <!--modal__inner-->
+  </div>
+  <!--modal-->
+
+  <!-- ここから上にコードを書く -->
+  <!-- この中に記述していく -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- JQerey Match Height -->
+  <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+  <!-- JQerey Match Height END -->
+  <!-- Bootstrap js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous" ></script>
+  <!-- Bootstrap js END -->
+  <!-- slick js -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <!-- slick js END -->
+  <script src="js/main.js"></script>
+</body>
 </html>
