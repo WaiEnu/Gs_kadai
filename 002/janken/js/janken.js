@@ -18,6 +18,7 @@
   ];
   const resultImgH = ["./img/house_all_sleep.png", "./img/gohst_at_house.png"];
   const resultImgD = ["./img/drow.png"];
+  const resultImgE = '<div></div><p>深刻なエラーが発生しました。</p>';
 
   const cmd_rnd = 7;
 
@@ -127,25 +128,28 @@
     $(".js-modal").fadeIn();
   }
 
-  function result(myHand, enemyHand) {
+  function result(myHandType, enemyHandType) {
+    const myHand =  1;
+    const enemyHand = 6;
+    const result = battle(myHand, enemyHand);
+  
     const HANDS = { 0: "snake", 1: "frog", 2: "slug", 3: "gohst", 6: "house" };
     console.log("me:" + myHand + ":" + HANDS[myHand]);
     console.log("enemy:" + enemyHand + ":" + HANDS[enemyHand]);
 
-    const result = battle(myHand, enemyHand);
     let htmlResult = "<div>";
     if (result === 2) {
       console.log("win");
+      htmlResult +=  winResult(myHand, enemyHand);
 
-      htmlResult += '<div><img src ="' + winResult(myHand, enemyHand) + '" alt ="win"></div><p>あなたの勝ちです!</p>';
     } else if (result === 1) {
       console.log("lose");
+      htmlResult += loseResult(myHand, enemyHand);
 
-      htmlResult += '<div><img src ="' + loseResult(myHand, enemyHand) + '" alt ="lose"></div><p>あなたの負けです!</p>';
     } else {
       console.log("drow");
+      htmlResult += drowResult();
 
-      htmlResult += '<div><img src ="' + drowResult() + '" alt ="drow"></div><p>あいこです!</p>';
     }
     htmlResult += "</div>";
     return htmlResult;
@@ -172,87 +176,119 @@
   }
 
   function winResult(me, enemy) {
+    const before = '<div><img src ="';
+    const after = '" alt ="win"></div><p>あなたの勝ちです!</p>';
     let src = "";
     switch (me) {
       case 0:
         switch (enemy) {
-          case 3:
-            src = resultImgG[0];
+          case 6:
+            src = getI(before, resultImgG[0], after);
             break;
           default:
-            src = resultImg[0];
+            src = getI(before, resultImg[0], after);
             break;
         }
         break;
       case 1:
         switch (enemy) {
           case 3:
-            src = resultImgG[1];
+            src = getI(before, resultImgG[1], after);
             break;
           default:
-            src = resultImg[1];
+            src = getI(before, resultImg[1], after);
             break;
         }
         break;
       case 2:
         switch (enemy) {
           case 3:
-            src = resultImgG[2];
+            src = getI(before, resultImgG[2], after);
             break;
           default:
-            src = resultImg[2];
+            src = getI(before, resultImg[2], after);
             break;
         }
         break;
       case 3:
-        src = resultImgH[0];
+        src = getI(before, resultImgH[0], after);
         break;
       case 6:
-        src = resultImgH[1];
+        src = getI(before, resultImgH[1], after);
         break;
       default:
+        src = resultImgE[0];
         break;
     }
     return src;
   }
   function loseResult(me, enemy) {
+    const before = '<div><img src ="';
+    const after = '" alt ="lose"></div><p>あなたの負けです!</p>';
     let src = "";
     switch (me) {
       case 0:
-        src = resultImg[2];
+        switch (enemy) {
+          case 6:
+            src = getI(before, resultImgH[0], after);
+            break;
+          default:
+            src = getI(before, resultImg[0], after);
+            break;
+        }
         break;
       case 1:
-        src = resultImg[0];
+        switch (enemy) {
+          case 6:
+            src = getI(before, resultImgH[0], after);
+            break;
+          default:
+            src = getI(before, resultImg[1], after);
+            break;
+        }
         break;
       case 2:
-        src = resultImg[1];
+        switch (enemy) {
+          case 6:
+            src = getI(before, resultImgH[0], after);
+            break;
+          default:
+            src = getI(before, resultImg[2], after);
+            break;
+        }
         break;
       case 3:
         switch (enemy) {
           case 0:
-            src = resultImgG[0];
+            src = getI(before, resultImgG[0], after);
             break;
           case 1:
-            src = resultImgG[1];
+            src = getI(before, resultImgG[1], after);
             break;
           case 2:
-            src = resultImgG[2];
+            src = getI(before, resultImgG[2], after);
             break;
           default:
             break;
         }
         break;
       case 6:
-        src = resultImgH[0];
+        src = getI(before, resultImgH[1], after);
         break;
       default:
+        src = resultImgE[0];
         break;
     }
     return src;
   }
   function drowResult() {
-    let src = resultImgD[0];
+    const before = '<div><img src ="';
+    const after = '" alt ="drow"></div><p>あいこです!</p>';
+    let src = getI(before, resultImgD[0], after);
     return src;
+  }
+  function getI(s1,s2,s3){
+    return s1 + s2 + s3;
   }
 
   $(".js-modal-close").on("click", function() {
