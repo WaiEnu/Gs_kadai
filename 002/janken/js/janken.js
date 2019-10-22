@@ -129,8 +129,8 @@
   }
 
   function result(myHandType, enemyHandType) {
-    const myHand =  1;
-    const enemyHand = 6;
+    const myHand =  2;
+    const enemyHand = 1;
     const result = battle(myHand, enemyHand);
   
     const HANDS = { 0: "snake", 1: "frog", 2: "slug", 3: "gohst", 6: "house" };
@@ -243,7 +243,7 @@
             src = getI(before, resultImgH[0], after);
             break;
           default:
-            src = getI(before, resultImg[1], after);
+            src = getI(before, resultImg[2], after);
             break;
         }
         break;
@@ -253,7 +253,7 @@
             src = getI(before, resultImgH[0], after);
             break;
           default:
-            src = getI(before, resultImg[2], after);
+            src = getI(before, resultImg[1], after);
             break;
         }
         break;
