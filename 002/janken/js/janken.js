@@ -129,8 +129,8 @@
   }
 
   function result(myHandType, enemyHandType) {
-    const myHand =  2;
-    const enemyHand = 1;
+    const myHand =  myHandType;
+    const enemyHand = enemyHandType;
     const result = battle(myHand, enemyHand);
   
     const HANDS = { 0: "snake", 1: "frog", 2: "slug", 3: "gohst", 6: "house" };
