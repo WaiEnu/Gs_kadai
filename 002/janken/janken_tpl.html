@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>じゃんけんアプリ</title>
+  </head>
+  <body>
+    <header>
+      <h1>嗚呼、食物連鎖</h1>
+    </header>
+    <main>
+      <article>
+        <h1>Enemy</h1>
+        <canvas id="screen"></canvas>
+      </article>
+      <div class="modal js-modal">
+          <div class="modal__bg js-modal-close">x</div>
+          <div class="modal__content">
+            <div id="alert"></div>
+          </div>
+      </div>
+      <article>
+        <h1>Me</h1>
+        <canvas id="hands_mine"></canvas>
+      </article>
+    </main>
+    <footer>
+      <article>
+        <div id="command_area">
+          <button id="paper" value="0">ヘビ</button>
+          <button id="rock" value="1">カエル</button>
+          <button id="scissors" value="2">ナメクジ</button>
+          <button id="random" value="7">?</button>
+        </div>
+        <button id="restart">再開</button>
+      </article>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/janken.js"></script>
+  </body>
+</html>
