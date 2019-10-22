@@ -40,10 +40,12 @@ main article div{
     justify-content: center;
     align-content: center;
 }
+main article div h1{
+    text-align: center;
+    margin: 0 auto;
+}
 main article canvas{
     margin: 10px auto;
-    width:150px;
-    height:150px;
     object-fit: cover;
 }
 footer{
