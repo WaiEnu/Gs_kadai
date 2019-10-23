@@ -18,7 +18,7 @@
   ];
   const resultImgH = ["./img/house_all_sleep.png", "./img/gohst_at_house.png"];
   const resultImgD = ["./img/drow.png"];
-  const resultImgE = '<div></div><p>深刻なエラーが発生しました。</p>';
+  const resultE = '<div><p>深刻なエラーが発生しました。</p></div>';
 
   const cmd_rnd = 7;
 
@@ -217,7 +217,7 @@
         src = getI(before, resultImgH[1], after);
         break;
       default:
-        src = resultImgE[0];
+        src = resultE[0];
         break;
     }
     return src;
@@ -268,15 +268,13 @@
           case 2:
             src = getI(before, resultImgG[2], after);
             break;
-          default:
-            break;
         }
         break;
       case 6:
         src = getI(before, resultImgH[1], after);
         break;
       default:
-        src = resultImgE[0];
+        src = resultE[0];
         break;
     }
     return src;
