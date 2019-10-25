@@ -103,7 +103,7 @@ function tarotReading() {
    + '<tr><th>タイトル</th><td>' + card.name + '</td></tr>'
    + '<tr><th>意味</th><td>' + card.mean  + '</td></tr></table>'
    + '<a href="return:false;" onclick="tarotReading()">ReLoad</a>'
-   + '<a href="return:false;" onclick="tarotDelete()">ReLoad</a>';
+   + '<a href="return:false;" onclick="tarotDelete()">Delete</a>';
 
   $("#cardNo").html(tarotTable);
 }
