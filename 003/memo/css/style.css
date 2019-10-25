@@ -1,0 +1,138 @@
+html,
+body {
+  height: 100%;
+  background: midnightblue;
+}
+h1 {
+  margin: 0 auto;
+  padding: 16px 0;
+}
+a {
+  display: inline-block;
+  width: auto;
+}
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+}
+nav {
+  width: 100vmin;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+nav form {
+  margin: 16px 8px 8px;
+  padding: 0;
+}
+main {
+  width: 100%;
+  margin: 0;
+  padding: 50px 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+article {
+  background-color: #fff;
+  margin: 32px auto 1vmin;
+  padding: 0;
+  width: 100vmin;
+}
+article a {
+  margin: 0.5rem;
+}
+#disp {
+  margin: 0 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.output {
+  margin: 0.5rem auto 0;
+  padding: 0;
+  width: 488px;
+  height: 88vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url("../img/sozai04.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item {
+  width: 185px;
+  height: 135px;
+  margin: 5px;
+  padding: 0;
+  overflow: hidden;
+  background-color: khaki;
+}
+.item .inner {
+  margin: 5px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#cardNo h3 {
+  display: inline-block;
+  width: calc(100vmin - 1rem);
+  margin: 0.5rem;
+}
+#cardNo table,
+#cardNo th,
+#cardNo td {
+  border-collapse: collapse;
+  border: 1px solid #333;
+  line-height: 1rem;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+  text-align: left;
+}
+#cardNo table {
+  width: calc(100vmin - 1rem);
+  margin: 0.5rem 0.5rem 0;
+  padding: 0 0 32px;
+  background-color: #fff;
+  border: 2px solid #333;
+}
+#cardNo th {
+  font-weight: bold;
+  width: 30%;
+}
+#link a {
+    width: 100%;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  background: rgba(102, 102, 110, 0.75);
+  z-index: 100;
+  text-align: right;
+}
+.dokusyozaru {
+  display: inline-block;
+  padding-right: 2rem;
+  color: #fff;
+}

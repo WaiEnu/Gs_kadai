@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Sephirot Tree</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <form id="init" submit="return false;">
+        <label for="newMemo">メモ：<input type="text" id="newMemo"/></label>
+        <input type="button" id="addBtn" class="c_btn" value="追加" onclick="addMemo()"/>
+        <button id="saveBtn" class="c_btn" onclick="save()">保存</button>
+      </form>
+      <form id="ctrl" class="non" submit="return false;">
+        <button id="clearBtn" class="c_btn" onclick="clearAllMemo()">すべて削除</button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    <article id="disp"></article>
+    <article id="cardNo">
+      <a href="return:false;" onclick="tarotReading()">◯ タロット</a>
+    </article>
+  <article id="link">
+    <a href="https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" target="_blank" title="ウィキペディアの「おまかせ表示」">◯ ウィキペディアの「おまかせ表示」</a>
+    <a href="https://ja.wiktionary.org/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" target="_blank" title="ウィクショナリーの「おまかせ表示」">◯ ウィクショナリーの「おまかせ表示」</a>
+  </article>
+  </main>
+
+ <footer>
+    <a class="dokusyozaru" href="https://readingmonkey.blog.fc2.com/blog-entry-765.html" target="_blank">アイデア大全ー57の発想法／思いつくことに行き詰まった時に開く備忘録</a>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
