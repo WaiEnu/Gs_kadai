@@ -1,3 +1,4 @@
+references
 
 - 課題1 (https://github.com/WaiEnu/Gs_kadai/tree/master/001/lab_naito_0013)
   - http://waienu5.sakura.ne.jp/001/lab_naito_0013/index.html
@@ -23,3 +24,27 @@
     - https://myx.skr.jp/game0.html
     - 【JavaScript】変数と定数の宣言（var, let, constの違い)【自己学習】 : 　https://qiita.com/OXIIVIA/items/05b4d8d644660c7f95bf
     - はじめよう！スプライトアニメーション https://qiita.com/nekoneko-wanwan/items/b0e64404a5cff582247a
+- 課題3 (http://waienu5.sakura.ne.jp/003/memo/index.html)
+  - https://qiita.com/tojimasan/items/b7f01aa1bbf1acd5a95e
+  - http://programming-blues.hatenablog.com/entry/MemoApp
+  - https://riptutorial.com/ja/jquery-ui/example/28128/%E3%83%95%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AB%E3%82%88%E3%82%8B%E3%82%BD%E3%83%BC%E3%83%88%E5%8F%AF%E8%83%BD%E3%81%AA%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89
+  - https://webkikaku.co.jp/blog/htmlcss/mix-blend-mode/
+  - 参考サイト
+    - 読書猿 https://readingmonkey.blog.fc2.com/
+    - アイデア大全 https://readingmonkey.blog.fc2.com/blog-entry-765.html
+- 課題4() 
+  - firebase console https://console.firebase.google.com/
+  - Node.jsをWindows10にインストールする方法 https://qiita.com/shiftsphere/items/5610f692899796b03f99
+  - FirebaseでWebサイトを無料でサクッと公開してみる https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
+  - 便利なパッケージ管理ツール！npmとは https://techacademy.jp/magazine/16105
+  - javascriptとhtmlだけ5分で作れるチャット！+ Firebaseを使ってWeb上に公開しちゃおう！ https://qiita.com/H_Crane/items/adf88cc01eabce2b9a5f
+  - FirebaseでWebチャットアプリをデプロイするまで（1時間コース） https://qiita.com/codomo_pro/items/9e651e8cffaa90681426
+  - Webカメラを起動＆撮影する  http://motojapan.hateblo.jp/entry/2017/12/13/085634
+  - 入門
+    - 【第1回】 Google の mBaaS 「 Firebase 」とは？【はじめてみよう Firebase】https://www.topgate.co.jp/firebase01-what-is-firebase
+    - 【第2回】 Firebase の基本操作を理解しよう！【はじめてみよう Firebase】https://www.topgate.co.jp/firebase02-how-to-use-firebase<
+    - 【第3回】サンプルアプリケーションを動かそう！【はじめてみよう Firebase】https://www.topgate.co.jp/firebase03-run-application-with-firebase
+    - 【第4回】 Firebase Hosting でスタティックな Web ページをデプロイしよう！【はじめてみよう Firebase】https://www.topgate.co.jp/firebase04-firebase-hosting-deploy-website
+    - 【第5回】 Firebase Authentication を使ってアプリケーションに認証機能を追加しよう【はじめてみよう Firebase】https://www.topgate.co.jp/firebase05-firebase-authentication
+    - 【第6回】 Cloud Storage for Firebase を使ってバイナリーデータを管理しよう【はじめてみよう Firebase】https://www.topgate.co.jp/firebase06-cloud-storage-for-firebase
+    - 【第7回】 Cloud Storage for Firebase セキュリティとルール【はじめてみよう Firebase】https://www.topgate.co.jp/firebase07-security-rule
