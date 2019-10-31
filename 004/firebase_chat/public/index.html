@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Q and A</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <main>
+    <section>
+      <h1>Q and A</h1>
+      <article>
+        <div id="input"></div>
+      </article>
+    </section>
+    <section id="boad" class="output_wrapper">
+      <article>
+        <div class="output"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBEHNDSvvCOEg6zuet9jSFBx1DkGpk5lKs",
+      authDomain: "chant-d009a.firebaseapp.com",
+      databaseURL: "https://chant-d009a.firebaseio.com",
+      projectId: "chant-d009a",
+      storageBucket: "chant-d009a.appspot.com",
+      messagingSenderId: "58375987919",
+      appId: "1:58375987919:web:a832b529f383d138f24dba",
+      measurementId: "G-XXY45V6GE8"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

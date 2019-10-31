@@ -1,0 +1,125 @@
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 8px;
+    width: 400px;
+}
+#boad article {
+    margin-bottom: 8px;
+}
+article #input,
+article .postText{
+    box-sizing: border-box;
+    width: calc(100% - 16px);
+    margin: 0 auto 24px;
+    padding:8px;
+    background: cornsilk;
+}
+article .postText{
+    border: 1px solid gray;
+}
+article .postText .message{
+    height: 5em;
+    word-break: break-all;
+    overflow: scroll;
+    background: #fff;
+}
+article .postText h3,
+article .postText p{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 8px 8px 8px 0;
+}
+article .postText h3{
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 0;
+}
+article #input{
+    margin: 24px auto;
+}
+article .output{
+    width: 100%;
+}
+.name,
+.select{
+    width: calc(100% - 8px);
+    padding:4px;
+}
+#inputStyle{
+    width: calc(100% - 8px);
+    padding:4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #d0cec6;
+}
+article .btn{
+    width: calc(100% - 8px);
+    padding:4px;
+    text-align: center;
+}
+p.img img{
+    width: 100%;
+    height: auto;
+}
+#inputStyle textarea{
+    width:  calc(100% - 8px);
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    background: rgb(175, 175, 174);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+section{
+    display: flex;
+    margin: 0 auto;
+    padding: 32px 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.output_wrapper{
+    margin: 0 auto;
+    background: burlywood;
+    min-height: 50vh;
+    height: 100%;
+}
+.input_ctrl{
+    width: 100%;
+    padding:0 0 8px;
+    color: blue;
+    cursor : pointer;
+}
+
+.icon span {
+    display: inline-block;
+    margin-left: 4px;
+}
+.icon:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    vertical-align: middle;
+}
+.image1:before {
+    background-image: url(../img/image1.png);
+}
+.image2:before {
+    background-image: url(../img/image2.png);
+}
+.image3:before {
+    background-image: url(../img/image3.jpg);
+}
