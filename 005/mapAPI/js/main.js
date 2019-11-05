@@ -35,13 +35,13 @@ function GetMap() {
     {//1.action
         label: 'delete',
         eventHandler: function () { //function
-            alert('delete');
+          alert('delete');
         }
     },
     {//2.action
         label: 'edit',
         eventHandler: function () { //function
-            alert('edit');
+          alert('edit');
         }
     }
   ];
