@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>求ム！！！目撃情報</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+</head>
+<body>
+<h1>求ム！！！目撃情報</h1>
+<main>
+  <!-- MAP[START] -->
+  <article id="myMap"></article>
+  <article id="myMapInfo">
+    <div class="btn"><button class="clear" id="allClear">allClear</button></div>
+    <div id="geocode"></div>
+    <table class="form">
+      <tr>
+        <th colspan="2"><h4>目撃情報</h4></th>
+      </tr>
+      <tr>
+        <th><label for="locate">タイトル:</label></th>
+        <td><input type="text" id="title" class="input"></td>
+      </tr>
+      <tr>
+        <th><label for="locate">場所:</label></th>
+        <td><input type="text" id="locate" class="input"></td>
+      </tr>
+      <tr>
+        <th><label for="select">種類:</label></th>
+        <td>
+          <select name="example" id="select">
+            <option value="動物">動物</option>
+            <option value="植物">植物</option>
+            <option value="石">石</option>
+            <option value="宇宙人">宇宙人</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="tac"><button class="submit" id="send">送信</button></td>
+      </tr>
+    </table>
+  </article>
+</main>
+<div class="modal js-modal">
+  <div class="modal__content">
+    <!--a class="js-modal-close xbtn" href="">X</a-->
+    <div class="article">
+      <label for="locate">タイトル:<input type="text" id="type_title" class="input"></label>
+      <label for="type_select">種類:
+        <select name="example" id="type_select">
+          <option value="動物">動物</option>
+          <option value="植物">植物</option>
+          <option value="石">石</option>
+        </select>
+      </label>
+      <input type="submit" value="送信" id="type_submit">
+    </div>
+  </div>
+  <div class="modal__bg js-modal-close"></div>
+  <!--modal__inner-->
+</div><!--modal-->
+
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AiWyeeuTJmRNn-ovZCsKfv5cfxBM-FXCZ4dXBNEj6rNFpcC1d3foHXIZ77ohd3JE" async defer></script>
+<script src="js/BmapQuery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

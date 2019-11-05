@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+main {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #9E9E9E;;
+}
+article {
+  width: 500px;
+  height: 500px;
+}
+#myMapInfo {
+  width: 400px;
+  height: 450px;
+  margin: 16px 24px;
+  background: seashell;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.btn {
+  height: 30px;
+  padding: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form {
+  height: 170px;
+  width: 384px;
+  margin: 8px;
+}
+.input {
+    width: 96%;
+}
+.tac {
+  text-align: center;
+}
+.form h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+#geocode {
+  height: 200px;
+  width: 384px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  background: #fff;
+  border:1px solid #9E9E9E;;
+  box-sizing: border-box;
+}
+.UMA_infomation_list {
+    margin: 8px 0 16px;
+    padding: 8px 0 0 16px;
+}
+.forbidden{
+    width: 900px;
+    height: 500px;
+    background: url("../img/404.png");
+    background-color: #2f2c36;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.forbidden h1{
+    color: #fdfeff;
+}
