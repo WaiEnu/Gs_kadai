@@ -26,7 +26,7 @@ function init() {
 function getRange_point($this){
   var name = $this.attr('name');
   var v = $('input[name="'+name+'"]').val();
-  $('#disp_'+name).val(parseFloat($eccinp.val())/10);
+  $('#disp_'+name).val(parseFloat(v)/10);
   habitableZone();
 }
 
