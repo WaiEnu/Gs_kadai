@@ -1,7 +1,6 @@
 "use strict";
 
 const rate = 10;
-const c = 0.1;
 
 const $spectype = $('select[name="spectype"]');
 const $ltmaginp = $('input[name="ltmaginp"]');
@@ -16,7 +15,6 @@ const $disp_ecc = $('#disp_eccinp');
 const $disp_spec = $('#disp_spectype');
 
 function init() {
- 
   $disp_ltmag.val($ltmaginp.val());
   $disp_orbrad.val($orbradinp.val());
   $disp_ecc.val(parseFloat($eccinp.val())/10);
@@ -73,7 +71,6 @@ function habitable(min,max) {
   ctx.clearRect(0,0,cv_width,cv_height);
   drowZone(ctx,rad_max,trns_fct,cent_x,cent_y,color);
   drowZone(ctx,rad_min,trns_fct,cent_x,cent_y,color2);
-  drowZone(ctx,c,c,cent_x,cent_y,color);
 }
 function orbit(smj_rad,pln_ecc) {
   const color = "red"; //線の色指定
@@ -98,7 +95,6 @@ function orbit(smj_rad,pln_ecc) {
   ctx.clearRect(0, 0, cv_width, cv_height);
 
   drowOrbit(ctx,rad,trns_fct,cent_x,cent_y,color);
-  drowZone(ctx,c,c,cent_x,cent_y,color);
 }
 
 function CalcHabitableZone(spect_type ,star_lmag){

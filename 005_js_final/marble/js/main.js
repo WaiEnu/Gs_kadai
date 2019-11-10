@@ -1,8 +1,6 @@
 
 $(function() {
-
   init();
-
   $ltmaginp.on({
     change: function() {
       getRange($(this));
