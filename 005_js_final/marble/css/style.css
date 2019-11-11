@@ -76,6 +76,7 @@ input[type="text"] {
   left:200px;
   background: #1d0956;
 }
+.canvas canvas#planet_disp,
 .canvas canvas#orbit_disp{
   position: absolute;
   top:0;

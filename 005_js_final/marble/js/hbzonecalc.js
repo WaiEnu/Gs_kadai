@@ -6,7 +6,8 @@ const $spectype = $('select[name="spectype"]');
 const $ltmaginp = $('input[name="ltmaginp"]');
 const $orbradinp = $('input[name="orbradinp"]');
 const $eccinp = $('input[name="eccinp"]');
-
+const moveOrbit = 'moveOrbit';
+const hbzArea = 'hbzArea';
 const $submit = $('input#submit');
 
 const $disp_ltmag = $('#disp_ltmaginp');
@@ -45,7 +46,7 @@ function habitableZone() {
   let hbzone_range = CalcHabitableZone(spect_type ,star_lmag);//Habitable zone 下限と上限計算
 
   habitable(hbzone_range[0].toFixed(3),hbzone_range[1].toFixed(3));
-  orbit(smj_rad,pln_ecc);
+  orbit(smj_rad,pln_ecc)
   $("#hzrngdsp").html(hbzone_range[0].toFixed(3) +"AU - "+ hbzone_range[1].toFixed(3) +"AU"); //範囲の表示
 }
 
@@ -68,9 +69,13 @@ function habitable(min,max) {
   let cent_x = cv_x;    	
   let cent_y = cv_y;
 
+
   ctx.clearRect(0,0,cv_width,cv_height);
   drowZone(ctx,rad_max,trns_fct,cent_x,cent_y,color);
   drowZone(ctx,rad_min,trns_fct,cent_x,cent_y,color2);
+  drowCenter(ctx,cent_x,cent_y,color);
+  localStorage.removeItem(hbzArea);
+  localStorage.setItem(hbzArea, JSON.stringify({rad_freezed:rad_max+10,rad_burned:rad_min-10,rad_habitat:rad_max-rad_min}));
 }
 function orbit(smj_rad,pln_ecc) {
   const color = "red"; //線の色指定
@@ -87,14 +92,41 @@ function orbit(smj_rad,pln_ecc) {
   let smn_rad = get_smn_rad(smj_rad,pln_ecc);
   let focus_dis = get_focus_dis(rad,pln_ecc);
 
-  let trns_fct = smn_rad / smj_rad ;//y軸を変形する比率
+  let trns_fct = smn_rad / smj_rad;//y軸を変形する比率
 
   let cent_x = cv_x/2 + focus_dis;//中心x座標
   let cent_y = cv_y * smj_rad/smn_rad/2.0 ;
 
   ctx.clearRect(0, 0, cv_width, cv_height);
-
   drowOrbit(ctx,rad,trns_fct,cent_x,cent_y,color);
+  localStorage.removeItem(moveOrbit);
+  localStorage.setItem(moveOrbit, JSON.stringify({smn_rad:smn_rad,smj_rad,smj_rad,focus_dis:focus_dis}));
+}
+
+function drowZone(ctx,rad,trns_fct,cent_x,cent_y,color) {
+  ctx.fillStyle = color; //線の色指定
+  //円
+  ctx.setTransform( 1 ,0 ,0 ,trns_fct ,0 ,0 ) ;
+  ctx.beginPath();
+  ctx.arc(cent_x, cent_y, rad, 0, Math.PI * 2, false);
+  ctx.fill();
+  ctx.setTransform( 1, 0, 0, 1, 0, 0 );//元に戻す
+}
+function drowOrbit(ctx,rad,trns_fct,cent_x,cent_y,color) {
+  ctx.strokeStyle = color; //線の色を指定
+  //円
+  ctx.setTransform( 1,0 ,0 ,trns_fct ,0 ,0 ) ;
+  ctx.beginPath();
+  ctx.arc(cent_x, cent_y, rad, 0, Math.PI * 2, false);
+  ctx.stroke();
+  ctx.setTransform( 1, 0, 0, 1, 0, 0 );//元に戻す
+}
+function drowCenter(ctx,cent_x,cent_y,color) {
+  ctx.strokeStyle = color; //線の色を指定
+  //円
+  ctx.beginPath();
+  ctx.arc(cent_x, cent_y, 1, 0, Math.PI * 2, false);
+  ctx.stroke();
 }
 
 function CalcHabitableZone(spect_type ,star_lmag){
@@ -127,23 +159,4 @@ function get_smn_rad(smj_rad,pln_ecc) {
 }
 function get_focus_dis(smj_rad,pln_ecc) {
   return smj_rad*pln_ecc;//焦点距離
-}
-
-function drowZone(ctx,rad,trns_fct,cent_x,cent_y,color) {
-  ctx.fillStyle = color; //線の色指定
-  //円
-  ctx.setTransform( 1 ,0 ,0 ,trns_fct ,0 ,0 ) ;
-  ctx.beginPath();
-  ctx.arc(cent_x, cent_y, rad, 0, Math.PI * 2, false);
-  ctx.fill();
-  ctx.setTransform( 1, 0, 0, 1, 0, 0 );//元に戻す
-}
-function drowOrbit(ctx,rad,trns_fct,cent_x,cent_y,color) {
-  ctx.strokeStyle = color; //線の色を指定
-  //円
-  ctx.setTransform( 1,0 ,0 ,trns_fct ,0 ,0 ) ;
-  ctx.beginPath();
-  ctx.arc(cent_x, cent_y, rad, 0, Math.PI * 2, false);
-  ctx.stroke();
-  ctx.setTransform( 1, 0, 0, 1, 0, 0 );//元に戻す
 }
