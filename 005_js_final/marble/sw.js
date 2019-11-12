@@ -15,6 +15,9 @@ const
   ].concat(offlineURL),
   //できれば・・・キャッシュ
   urlsToCache2 = [
+    './img/burning.gif',
+    './img/freezing.gif',
+    './img/kitten.gif'
   ];
 
 //************************************************
