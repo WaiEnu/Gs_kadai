@@ -79,8 +79,8 @@ function habitable(min, max) {
   localStorage.setItem(
     hbzArea,
     JSON.stringify({
-      freeze: rad_max + 20,
-      burn: rad_min - 20,
+      freeze: rad_max + 18,
+      burn: rad_min - 18,
       habitat: rad_max / 2 + rad_min / 2
     })
   );

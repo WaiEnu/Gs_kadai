@@ -13,10 +13,9 @@ onload = function() {
 
 function planet() {
   const arr_moveOrbit = JSON.parse(localStorage.getItem(moveOrbit));
-
-  let smj_rad = arr_moveOrbit.smj_rad;
-  let smn_rad = arr_moveOrbit.smn_rad;
-  let focus_dis = arr_moveOrbit.focus_dis;
+  smj_rad = arr_moveOrbit.smj_rad;
+  smn_rad = arr_moveOrbit.smn_rad;
+  focus_dis = arr_moveOrbit.focus_dis;
 
   var canvas = document.getElementById("planet_disp");
   ctx = canvas.getContext("2d");
@@ -28,7 +27,13 @@ function planet() {
   cent_y = cy;
 
   ctx.clearRect(0, 0, cv_width, cv_height);
+  drawHZ();
+  drawPlanet();
 
+  time = (time + 2) % 360;
+  setTimeout(planet, 1000 / 30);
+}
+function drawPlanet() {
   ctx.fillStyle = "blue";
   // 楕円軌道アニメ
   var rad = KeplersEquation(radians(time), 0.5);
@@ -38,10 +43,11 @@ function planet() {
   var planetImg0 = new Image();
   planetImg0.src = "./img/kitten.gif";
   ctx.beginPath();
-  ctx.arc(cent_x + x * 10, cent_y - y * 10, 16, 0, 2 * Math.PI);
+  ctx.arc(cent_x + x * 10, cent_y - y * 10, 12, 0, 2 * Math.PI);
   ctx.fill();
   ctx.stroke();
-
+}
+function drawHZ() {
   const arr_hbzArea = JSON.parse(localStorage.getItem(hbzArea));
   var imageSrcs = [
     { key: "freeze", src: "./img/freezing.gif" },
@@ -58,12 +64,9 @@ function planet() {
     var rad = radians(time);
     var x = Math.cos(rad) * hz_rad;
     var y = Math.sin(rad) * hz_rad;
-    ctx.arc(cent_x + x * 10, cent_y + y * 10, 10, 0, 2 * Math.PI);
-    ctx.drawImage(planetImg[i], cent_x + x - 16, cent_y + y - 16, 32, 32);
+    ctx.arc(cx + x * 10, cy + y * 10, 10, 0, 2 * Math.PI);
+    ctx.drawImage(planetImg[i], cx + x - 16, cy + y - 16, 32, 32);
   }
-
-  time = (time + 2) % 360;
-  setTimeout(planet, 1000 / 30);
 }
 function KeplersEquation(M, e) {
   var E;

@@ -68,18 +68,23 @@ input[type="text"] {
   margin: 8px auto 16px;
   padding: 0;
   width: 800px;
-  height: 400px;
+  height: 500px;
 }
 .canvas canvas#nzone_disp{
   position: absolute;
-  top:0;
+  top:30px;
   left:200px;
   background: #1d0956;
 }
-.canvas canvas#planet_disp,
 .canvas canvas#orbit_disp{
   position: absolute;
-  top:0;
+  top:30px;
+  left:0;
+  background: transparent;
+}
+.canvas canvas#planet_disp{
+  position: absolute;
+  top:0px;
   left:0;
   background: transparent;
 }
