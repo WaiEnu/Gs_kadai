@@ -1,105 +1,106 @@
-
-const planetImg =new Array('./img/kitten.gif','./img/burning.gif','./img/freezing.gif');
-
 const epsilon = 1.0e-14;
 var times = 0;
-var degree = 0;     //中心点からの角度
-var drawRadius = 10;   //動かしたい円の半径
-var ex = [];	// ellipse
+var degree = 0; //中心点からの角度
+var drawRadius = 10; //動かしたい円の半径
+var ex = []; // ellipse
 var ey = [];
 var time = 0;
 var time2 = 0;
 
-onload = function(){
-  var canvas = document.getElementById('planet_disp');
-  ctx = canvas.getContext("2d");
-  cx = canvas.width / 2;
-  cy = canvas.height / 2;  
-  e = 0.5;
-  a = 200;
-  b = Math.sqrt((1 - e * e) * a * a);
-  for (var t = 0; t < 360; t += 5) {
-    var rad = radians(t);
-    ex.push(cx + Math.cos(rad) * a);
-    ey.push(cy + Math.sin(rad) * b);
-  }
+onload = function() {
   planet();
+
   planet_hz();
 };
- 
 
-function planet_hz(){
-  let cent_x = cx/2;//中心x座標
-  let cent_y = cy/2;
+function planet_hz() {
+  var cvs_hz = document.getElementById("planet_hz_disp");
+  ctx_hz = cvs_hz.getContext("2d");
+  cv_hz_width = cvs_hz.width;
+  cv_hz_height = cvs_hz.height;
+  cx_hz = cv_hz_width / 2;
+  cy_hz = cv_hz_height / 2;
+  cent_hz_x = cx_hz; //中心x座標
+  cent_hz_y = cy_hz;
+
+  ctx_hz.clearRect(0, 0, cv_hz_width, cv_hz_height);
 
   const arr_hbzArea = JSON.parse(localStorage.getItem(hbzArea));
-
-  img1 = new Image();
-  img1.src = planetImg[0];
-    draw_planet_hz(img1,cent_x,cent_y,arr_hbzArea.rad_habitat);
-  img1.onload = function(){
+  var imageSrcs = [
+    { key: "freeze", src: "./img/burning.gif" },
+    { key: "burn", src: "./img/freezing.gif" },
+    { key: "habitat", src: "./img/kitten.gif" }
+  ];
+  var planetImg = [];
+  for (var i in imageSrcs) {
+    planetImg[i] = new Image();
+    planetImg[i].src = imageSrcs[i].src;
   }
-  img2 = new Image();
-  img2.src = planetImg[1];
-    draw_planet_hz(img2,cent_x,cent_y,arr_hbzArea.rad_burned);
-  img2.onload = function(){
+  var loadedCount = 1;
+  for (var i in planetImg) {
+    planetImg[i].addEventListener(
+      "load",
+      function() {
+        if (loadedCount == planetImg.length) {
+          for (var j in planetImg) {
+            var strageKey = imageSrcs[i].key;
+            var x = arr_hbzArea[strageKey];
+            var y = arr_hbzArea[strageKey];
+            ctx_hz.drawImage(planetImg[j], cx_hz + x, cy_hz + y, 36, 36);
+          }
+        }
+        loadedCount++;
+      },
+      false
+    );
   }
-  img3 = new Image();
-  img3.src = planetImg[2];
-    draw_planet_hz(img3,cent_x,cent_y,arr_hbzArea.rad_freezed);
-  img3.onload = function(){
-  }
-
-	degree++;
-};
-function draw_planet_hz(img,cent_x,cent_y,moveRadius){
-  ctx.beginPath();
-
-  //x座標とy座標を計算
-  var x = Math.cos( Math.PI / 180 * degree) * moveRadius + cent_x;
-  var y = Math.sin( Math.PI / 180 * degree) * moveRadius + cent_y;
-
-  ctx.drawImage(img,x,y);
-  ctx.closePath();
+  degree = (degree + 2) % 360;
+  loadedCount = 0;
+  //setTimeout(planet_hz, 1000 / 30);
 }
 
-function planet(){
+function planet() {
   const arr_moveOrbit = JSON.parse(localStorage.getItem(moveOrbit));
 
   let smj_rad = arr_moveOrbit.smj_rad;
   let smn_rad = arr_moveOrbit.smn_rad;
   let focus_dis = arr_moveOrbit.focus_dis;
 
-  let cent_x = cx/2 + focus_dis;//中心x座標
-  let cent_y = cy/2;
+  var canvas = document.getElementById("planet_disp");
+  ctx = canvas.getContext("2d");
+  cv_width = canvas.width;
+  cv_height = canvas.height;
+  cx = canvas.width / 2;
+  cy = canvas.height / 2;
+  cent_x = cx + focus_dis; //中心x座標
+  cent_y = cy;
 
   ctx.clearRect(0, 0, cv_width, cv_height);
-  planet_hz();
 
-	ctx.fillStyle = "Red";
- 	// 楕円軌道アニメ
-	var rad = KeplersEquation(radians(time));
-	var x = Math.cos(rad) * smj_rad;
-	var y = Math.sin(rad) * smn_rad;
+  ctx.fillStyle = "Red";
+  // 楕円軌道アニメ
+  var rad = KeplersEquation(radians(time), 0.5);
+  var x = Math.cos(rad) * smj_rad;
+  var y = Math.sin(rad) * smn_rad;
 
-	ctx.beginPath();
-	ctx.arc(cent_x + x*10, cent_y - y*10, 10, 0, 2 * Math.PI);
-	ctx.fill();
-	ctx.stroke();
-   
-	time = (time + 2) % 360;
-	setTimeout(planet, 1000 / 30);
+  ctx.beginPath();
+  ctx.arc(cent_x + x * 10, cent_y - y * 10, 10, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.stroke();
+
+  time = (time + 2) % 360;
+  setTimeout(planet, 1000 / 30);
 }
-function KeplersEquation(M) {
-	var E;
-	var E0 = M;	// 初項
-	for (var i = 0; i < 10; i++) {
-		E = M + e * Math.sin(E0);
-		if ((E0 - epsilon < E) && (E < E0 + epsilon)) break;
-		E0 = E;
-	}
-	return E;
+function KeplersEquation(M, e) {
+  var E;
+  var E0 = M; // 初項
+  for (var i = 0; i < 10; i++) {
+    E = M + e * Math.sin(E0);
+    if (E0 - epsilon < E && E < E0 + epsilon) break;
+    E0 = E;
+  }
+  return E;
 }
 function radians(degrees) {
-	return degrees * Math.PI / 180;
+  return (degrees * Math.PI) / 180;
 }
