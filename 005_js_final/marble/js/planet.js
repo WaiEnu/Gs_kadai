@@ -34,7 +34,7 @@ function planet() {
   setTimeout(planet, 1000 / 30);
 }
 function drawPlanet() {
-  ctx.fillStyle = "blue";
+  ctx.fillStyle = "red";
   // 楕円軌道アニメ
   var rad = KeplersEquation(radians(time), 0.5);
   var x = Math.cos(rad) * smj_rad;
