@@ -32,15 +32,14 @@ references
   - 参考サイト
     - 読書猿 https://readingmonkey.blog.fc2.com/
     - アイデア大全 https://readingmonkey.blog.fc2.com/blog-entry-765.html
-- 課題4() 
-  - firebase console https://console.firebase.google.com/
-  - Node.jsをWindows10にインストールする方法 https://qiita.com/shiftsphere/items/5610f692899796b03f99
-  - FirebaseでWebサイトを無料でサクッと公開してみる https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
-  - 便利なパッケージ管理ツール！npmとは https://techacademy.jp/magazine/16105
-  - javascriptとhtmlだけ5分で作れるチャット！+ Firebaseを使ってWeb上に公開しちゃおう！ https://qiita.com/H_Crane/items/adf88cc01eabce2b9a5f
-  - FirebaseでWebチャットアプリをデプロイするまで（1時間コース） https://qiita.com/codomo_pro/items/9e651e8cffaa90681426
-  - Webカメラを起動＆撮影する  http://motojapan.hateblo.jp/entry/2017/12/13/085634
+  - リロードした時に位置を保存したいときは、付箋の位置を取得してlocalstorageに追加してしまうといいと思います〜
+    - https://buglin.sakura.ne.jp/memopad/memo2d.html
+    - https://kendai912.sakura.ne.jp/PowerpointSketch/
+- 課題4 (http://waienu5.sakura.ne.jp/004/firebase_chat/public/index.html)
+  - firebase
+    - console https://console.firebase.google.com/
   - 入門
+    - FirebaseでWebサイトを無料でサクッと公開してみる https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
     - 【第1回】 Google の mBaaS 「 Firebase 」とは？【はじめてみよう Firebase】https://www.topgate.co.jp/firebase01-what-is-firebase
     - 【第2回】 Firebase の基本操作を理解しよう！【はじめてみよう Firebase】https://www.topgate.co.jp/firebase02-how-to-use-firebase<
     - 【第3回】サンプルアプリケーションを動かそう！【はじめてみよう Firebase】https://www.topgate.co.jp/firebase03-run-application-with-firebase
@@ -48,3 +47,68 @@ references
     - 【第5回】 Firebase Authentication を使ってアプリケーションに認証機能を追加しよう【はじめてみよう Firebase】https://www.topgate.co.jp/firebase05-firebase-authentication
     - 【第6回】 Cloud Storage for Firebase を使ってバイナリーデータを管理しよう【はじめてみよう Firebase】https://www.topgate.co.jp/firebase06-cloud-storage-for-firebase
     - 【第7回】 Cloud Storage for Firebase セキュリティとルール【はじめてみよう Firebase】https://www.topgate.co.jp/firebase07-security-rule
+  - node.js
+    - 便利なパッケージ管理ツール！npmとは https://techacademy.jp/magazine/16105
+    - Node.jsをWindows10にインストールする方法 https://qiita.com/shiftsphere/items/5610f692899796b03f99
+  - チュートリアル
+    - Firestoreのデータ操作(取得, 追加, 更新, 削除) https://www.wakuwakubank.com/posts/723-firebase-firestore-query/
+    - Firebase Cloud Firestoreの使い方 https://qiita.com/subaru44k/items/a88e638333b8d5cc29f2
+    - FirebaseでWebチャットアプリをデプロイするまで（1時間コース） https://qiita.com/codomo_pro/items/9e651e8cffaa90681426
+    - javascriptとhtmlだけ5分で作れるチャット！+ Firebaseを使ってWeb上に公開しちゃおう！ https://qiita.com/H_Crane/items/adf88cc01eabce2b9a5f
+    - [Firebase] Firestoreでリアルタイムなチャットを作る (Web編) その1 https://blog.katsubemakito.net/firebase/firestore_realtime_1
+  - chat App
+    - [HTML5] カメラをJSで操作し写真を撮影する https://blog.katsubemakito.net/html5/camera1
+    - 【JavaScript】日付処理 https://qiita.com/kazu56/items/cca24cfdca4553269cab
+    - [JavaScript] 現在日付をYYYY/MM/DD形式の文字列で取得する https://javascript.programmer-reference.com/js-date-format-yyyymmdd/
+    - 【3分でできる】ライブラリなしでファイルをドラッグ&ドロップでアップロード https://qiita.com/pomcho555/items/b9dcae3a5afeafd1f14f
+  - 課題4参考
+    - http://ksk-tennis.sakura.ne.jp/week4/login.html
+    - http://missy34.sakura.ne.jp/auth/login.html
+    - https://shihori23.sakura.ne.jp/chat/simple.html
+    - http://tomoyasato.sakura.ne.jp/chatApp/login.html
+    - http://imappa.sakura.ne.jp/js03/auth/main.html
+    - http://imappa.sakura.ne.jp/js03/auth/main.html
+    - chatbot
+    - https://redturtle44.sakura.ne.jp/assignment/index.html
+- 課題5 (http://waienu5.sakura.ne.jp/005/mapAPI/)
+  - 地図
+    - 公園検索
+    - UMA目撃情報
+  - Bings MapsAPI key 
+    - AiWyeeuTJmRNn-ovZCsKfv5cfxBM-FXCZ4dXBNEj6rNFpcC1d3foHXIZ77ohd3JE
+  - BingMaps GO！ https://mapapi.org/
+  - BmapQuery.js https://mapapi.org/indexb.php
+  - 『 Map API 』超簡単ライブラリ（BmapQuery.js） https://qiita.com/daisu_yamazaki/items/a858d405b37b300e855b
+  - GoogleMapsAPI
+    - https://qiita.com/Kenta-Han/items/1a009ca82eacb91bffd3
+    - https://blog.maromaro.co.jp/archives/5441
+    - https://qiita.com/pen_era/items/fab44bb5bd91b6e130ae
+    - http://ksk-tennis.sakura.ne.jp/week3/index3.html
+- PWA
+  - 課題
+    - firebase
+      - ログイン認証
+      - 位置情報DB登録(json?)
+      - 画像アップロード
+    - MapAPI
+      - 現在地取得
+        - http://aquamarine03.sakura.ne.jp/05_map/map_kadai.html
+      - イベント処理
+        - https://tomoyasato.sakura.ne.jp/05_map/test.html
+      - 地点検索
+        - https://redturtle44.sakura.ne.jp/mapassignment/index.html
+      - 情報取得
+        - https://kendai912.sakura.ne.jp/IkinariDateCourse/
+    - メモ
+      - 音声メモ
+      - 動くメモ位置登録
+    - その他
+      - 論文検索機能(google scholer?)
+  - https://qiita.com/poster-keisuke/items/6651140fa20c7aa18474
+  - https://qiita.com/bunty/items/a0dc2d6b3986dd1c5a73
+- JS選手権(http://waienu5.sakura.ne.jp/005_js_final/marble/)
+  - ハビタブルゾーン計算
+    - http://www.amigo2.ne.jp/~s_mouse/infexpl/pldtnapp/habitappl.html
+    - 物理シミュレーション環境構築用HTML5フレームワーク「physics.js」 http://www.natural-science.or.jp/physics.js/physics.js_r14/index.html
+    - CSS、canvas、SVGで円周上をアニメーションさせる方法 https://liginc.co.jp/web/html-css/html/175526/2
+    - http://www.maroon.dti.ne.jp/lance/js/canvas/orbit2.html
