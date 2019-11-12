@@ -1,4 +1,3 @@
-
 $(function() {
   init();
   $ltmaginp.on({
@@ -25,10 +24,10 @@ $(function() {
       getRange_point($(this));
     }
   });
-  $spectype.on('change', function() {
+  $spectype.on("change", function() {
     habitableZone();
   });
-  $submit.on('change', function() {
+  $submit.on("change", function() {
     habitableZone();
   });
 });
