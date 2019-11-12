@@ -37,7 +37,7 @@ function getRange($this) {
 }
 
 function habitableZone() {
-  const star_lmag = $disp_ltmag.val();
+  const star_lmag = $disp_ltmag.val()*10;
   const pln_ecc = $disp_ecc.val();
   const spect_type = $disp_spec.val();
 
