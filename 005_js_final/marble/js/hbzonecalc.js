@@ -75,7 +75,7 @@ function habitable(min,max) {
   drowZone(ctx,rad_min,trns_fct,cent_x,cent_y,color2);
   drowCenter(ctx,cent_x,cent_y,color);
   localStorage.removeItem(hbzArea);
-  localStorage.setItem(hbzArea, JSON.stringify({freeze:rad_max+10,burn:rad_min-10,habitat:rad_max-rad_min}));
+  localStorage.setItem(hbzArea, JSON.stringify({freeze:rad_max,burn:rad_min,habitat:rad_max-rad_min}));
 }
 function orbit(smj_rad,pln_ecc) {
   const color = "red"; //線の色指定

@@ -20,8 +20,6 @@ function planet_hz() {
   cv_hz_height = cvs_hz.height;
   cx_hz = cv_hz_width / 2;
   cy_hz = cv_hz_height / 2;
-  cent_hz_x = cx_hz; //中心x座標
-  cent_hz_y = cy_hz;
 
   ctx_hz.clearRect(0, 0, cv_hz_width, cv_hz_height);
 
@@ -38,15 +36,18 @@ function planet_hz() {
   }
   var loadedCount = 1;
   for (var i in planetImg) {
+    console.log(arr_hbzArea[imageSrcs[i].key])
     planetImg[i].addEventListener(
       "load",
       function() {
         if (loadedCount == planetImg.length) {
           for (var j in planetImg) {
-            var strageKey = imageSrcs[i].key;
-            var x = arr_hbzArea[strageKey];
-            var y = arr_hbzArea[strageKey];
-            ctx_hz.drawImage(planetImg[j], cx_hz + x, cy_hz + y, 36, 36);
+            var smj_rad=arr_hbzArea[imageSrcs[j].key];
+            var rad = radians(degree);
+            var x = Math.cos(rad) * smj_rad;
+            var y = Math.sin(rad) * smj_rad;
+            ctx_hz.drawImage(planetImg[j], cx_hz + x, cy_hz + y);
+            console.log(cx_hz, cy_hz, x, y, smj_rad, rad, planetImg[j])
           }
         }
         loadedCount++;
@@ -54,8 +55,9 @@ function planet_hz() {
       false
     );
   }
+
   degree = (degree + 2) % 360;
-  loadedCount = 0;
+
   //setTimeout(planet_hz, 1000 / 30);
 }
 
