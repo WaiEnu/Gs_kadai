@@ -84,31 +84,15 @@ references
     - https://blog.maromaro.co.jp/archives/5441
     - https://qiita.com/pen_era/items/fab44bb5bd91b6e130ae
     - http://ksk-tennis.sakura.ne.jp/week3/index3.html
-- PWA
-  - 課題
-    - firebase
-      - ログイン認証
-      - 位置情報DB登録(json?)
-      - 画像アップロード
-    - MapAPI
-      - 現在地取得
-        - http://aquamarine03.sakura.ne.jp/05_map/map_kadai.html
-      - イベント処理
-        - https://tomoyasato.sakura.ne.jp/05_map/test.html
-      - 地点検索
-        - https://redturtle44.sakura.ne.jp/mapassignment/index.html
-      - 情報取得
-        - https://kendai912.sakura.ne.jp/IkinariDateCourse/
-    - メモ
-      - 音声メモ
-      - 動くメモ位置登録
-    - その他
-      - 論文検索機能(google scholer?)
-  - https://qiita.com/poster-keisuke/items/6651140fa20c7aa18474
-  - https://qiita.com/bunty/items/a0dc2d6b3986dd1c5a73
 - JS選手権(http://waienu5.sakura.ne.jp/005_js_final/marble/)
   - ハビタブルゾーン計算
     - http://www.amigo2.ne.jp/~s_mouse/infexpl/pldtnapp/habitappl.html
     - 物理シミュレーション環境構築用HTML5フレームワーク「physics.js」 http://www.natural-science.or.jp/physics.js/physics.js_r14/index.html
     - CSS、canvas、SVGで円周上をアニメーションさせる方法 https://liginc.co.jp/web/html-css/html/175526/2
     - http://www.maroon.dti.ne.jp/lance/js/canvas/orbit2.html
+- 課題6 (http://waienu5.sakura.ne.jp/006/)
+  - クイズ
+    - https://www.webprofessional.jp/simple-javascript-quiz/
+    - http://www.shurey.com/js/craft/quiz/index.html
+    - https://codepen.io/piyamarco/pen/XbXENW
+- 課題7 ()
