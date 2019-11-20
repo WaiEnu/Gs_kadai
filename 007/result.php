@@ -2,13 +2,16 @@
 //1.  DB接続します
 try {
   //Password:MAMP='root',XAMPP=''
-  $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','root');
+  //$pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','root');
   //本番環境
-  //$pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=waienu5.sakura.ne.jp','waienu5.sakura.ne.jp','z6kthae9ks');
+  $pdo = new PDO('mysql:dbname=waienu5_lab8;charset=utf8;host=mysql743.db.sakura.ne.jp','waienu5','root2root');
 } catch (PDOException $e) {
   exit('DB Connection Error'.$e->getMessage());
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 課題7修正
 
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM sng_deta_table ORDER BY score DESC, indate DESC");
@@ -39,9 +42,9 @@ if($status==false) {
 ?>
 
 <div id="deta">
+  <div id= "result"></div>
   <div id= "avarage"></div>
   <div id= "graph"></div>
-  <div id= "result"></div>
 </div>
 
 <?php include("template/d3js.html"); ?>
