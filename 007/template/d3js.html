@@ -22,6 +22,7 @@ var COL_DATE = 'indate';
 var base =100;
 
 drawTable();
+rank();
 calc();
 
 /**
@@ -41,11 +42,6 @@ function drawTable() {
   tr.append("td").text(function (dataRow){return dataRow[COL_EMAIL];});
   tr.append("td").text(function (dataRow){return dataRow[COL_SCORE];});
   tr.append("td").text(function (dataRow){return dataRow[COL_DATE];});
-  var rank = d3.select(".rank").selectAll("td").data(index).enter().text(
-    function (d) {
-      return d;
-    }
-  );
 }
 function calc(){
   var average = d3.mean(data, function (d){return d.score;});
@@ -62,12 +58,17 @@ function format_json(json){
   return arr;
 }
 function format_key(json){
-  var arr_o = Object.keys(json[0]);
-  var arr = arr_o.splice(0, 0, 'name', 'rank');
+  var arr = Object.keys(json[0]);
+  arr.splice(0, 1, 'rank');
   return arr;
 }
 function format_index(json){
   var arr = Object.keys(json);
   return arr;
+}
+function rank(){
+  $(TABLE_ELEMENT_ID+' table td.rank').each(function(i){
+    $(this).html((i+1));
+  });
 }
 </script>
