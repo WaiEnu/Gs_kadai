@@ -13,7 +13,7 @@ try {
   //Password:MAMP='root',XAMPP=''
   //$pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','root');
   //本番環境
-  $pdo = new PDO('mysql:dbname=waienu5_lab8;charset=utf8;host=waienu5.sakura.ne.jp/','waienu5','root2root');
+  $pdo = new PDO('mysql:dbname=waienu5_lab8;charset=utf8;host=mysql743.db.sakura.ne.jp','waienu5','root2root');
 } catch (PDOException $e) {
   exit('DB ERROR:'.$e->getMessage());
 }
