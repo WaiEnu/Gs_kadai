@@ -8,7 +8,7 @@ try {
 } catch (PDOException $e) {
   exit('DB Connection Error'.$e->getMessage());
 }
-/** */
+
 
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM sng_deta_table ORDER BY score DESC, indate DESC");
