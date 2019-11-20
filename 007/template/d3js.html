@@ -36,11 +36,16 @@ function drawTable() {
   thr.append("th").text('日付'); 
   var	tbody = table.append('tbody');       
   var tr = tbody.selectAll('tr').data(data).enter().append('tr');
-  tr.append("td").text('');
-  tr.append("td").text(function (dataRow) {return dataRow[COL_NAME];});
-  tr.append("td").text(function (dataRow) {return dataRow[COL_EMAIL];});
-  tr.append("td").text(function (dataRow) {return dataRow[COL_SCORE];});
-  tr.append("td").text(function (dataRow) {return dataRow[COL_DATE];});
+  tr.append("td").attr("class", "rank");
+  tr.append("td").text(function (dataRow){return dataRow[COL_NAME];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_EMAIL];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_SCORE];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_DATE];});
+  var rank = d3.select(".rank").selectAll("td").data(data).enter().text(
+    function (d) {
+      return d;
+    }
+  );
 }
 function calc(){
   var average = d3.mean(data, function (d){return d.score;});
