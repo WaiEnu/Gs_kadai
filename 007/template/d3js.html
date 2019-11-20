@@ -3,8 +3,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-const json =  JSON.parse('<?=$json?>');
-const data =format_json(json);
+const json =  JSON.parse('<?=$json?>',true);
+const data = format_json(json);
+const key = format_key(data);
+const index = format_index(data);
 
 // 一覧描画先
 var TABLE_ELEMENT_ID = '#result';
@@ -29,11 +31,9 @@ function drawTable() {
   var table = d3.select(TABLE_ELEMENT_ID).append('table')
   var	thead = table.append('thead');
   var thr = thead.append("tr");
-  thr.append("th").text('rank');
-  thr.append("th").text('名前');
-  thr.append("th").text('email');
-  thr.append("th").text('スコア');
-  thr.append("th").text('日付'); 
+  for(k in key){
+    thr.append("th").text(key[k]);
+  }
   var	tbody = table.append('tbody');       
   var tr = tbody.selectAll('tr').data(data).enter().append('tr');
   tr.append("td").attr("class", "rank");
@@ -41,7 +41,7 @@ function drawTable() {
   tr.append("td").text(function (dataRow){return dataRow[COL_EMAIL];});
   tr.append("td").text(function (dataRow){return dataRow[COL_SCORE];});
   tr.append("td").text(function (dataRow){return dataRow[COL_DATE];});
-  var rank = d3.select(".rank").selectAll("td").data(data).enter().text(
+  var rank = d3.select(".rank").selectAll("td").data(index).enter().text(
     function (d) {
       return d;
     }
@@ -59,6 +59,15 @@ function format_json(json){
   for (i in json){
     if( json[i] ){ arr.push(json[i]); }
   }
+  return arr;
+}
+function format_key(json){
+  var arr_o = Object.keys(json[0]);
+  var arr = arr_o.splice(0, 0, 'name', 'rank');
+  return arr;
+}
+function format_index(json){
+  var arr = Object.keys(json);
   return arr;
 }
 </script>
