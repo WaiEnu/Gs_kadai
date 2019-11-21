@@ -19,6 +19,7 @@ $name=$GET["name"];
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="register.php">配下登録</a></div>
+      <div class="navbar-header"><span class="navbar-brand" href="mao.php">魔王の間</span></div>
     </div>
   </nav>
 </header>
