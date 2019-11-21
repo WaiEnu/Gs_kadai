@@ -32,9 +32,9 @@ if($status==false) {
 ?>
 
 <div id="deta">
-  <div id= "result"></div>
   <div id= "avarage"></div>
   <div id= "graph"></div>
+  <div id= "result"></div>
 </div>
 
 <?php include("template/d3js.html"); ?>
