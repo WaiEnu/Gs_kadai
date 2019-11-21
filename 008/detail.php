@@ -48,9 +48,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
      <label>年齢：<input type="text" name="age" value ="<?=$row["age"]?>"></label><br>
      <label>ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label><br>
      <label>PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label><br>
-     <label><textArea name="naiyou" rows="4" cols="40"><?=$row["naiyou"]?></textArea></label><br>
      <label>管理者権限：<input type="text" name="kanri_flg" value ="<?=$row["kanri_flg"]?>"></label><br>
      <label>状態：<input type="text" name="lif_flg" value ="<?=$row["kanri_flg"]?>"></label><br>
+     <label><textArea name="naiyou" rows="4" cols="40"><?=$row["naiyou"]?></textArea></label><br>
      <input type="hidden" name="id" value ="<?=$row["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
