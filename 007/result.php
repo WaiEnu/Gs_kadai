@@ -21,7 +21,7 @@ if($status==false) {
 
 }else{
   //Selectデータの数だけ自動でループしてくれる
-  //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
+  //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
   while( $result[] = $stmt->fetch(PDO::FETCH_ASSOC));
   $json=json_encode($result , JSON_UNESCAPED_UNICODE);
 }
