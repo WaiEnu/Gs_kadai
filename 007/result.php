@@ -8,11 +8,6 @@ try {
 } catch (PDOException $e) {
   exit('DB Connection Error'.$e->getMessage());
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 課題7修正
-
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM sng_deta_table ORDER BY score DESC, indate DESC");
 $status = $stmt->execute();
@@ -26,12 +21,7 @@ if($status==false) {
 
 }else{
   //Selectデータの数だけ自動でループしてくれる
-  //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php 
-  $view .= "<table>";
-  /**while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<tr><td>".$result["id"]."</td><td>".$result["name"]."</td><td>".$result["naiyou"]."</td></tr>"; 
-  }
-  $view .= "</table>";*/
+  //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
   while( $result[] = $stmt->fetch(PDO::FETCH_ASSOC));
   $json=json_encode($result , JSON_UNESCAPED_UNICODE);
 }
