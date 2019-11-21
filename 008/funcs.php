@@ -8,9 +8,9 @@ function h($str){
 function db_conn(){
   try {  
     //Password:MAMP='root',XAMPP=''
-    $pdo = new PDO('mysql:dbname=gs_db3;charset=utf8;host=localhost','root','root');
+    //$pdo = new PDO('mysql:dbname=gs_db3;charset=utf8;host=localhost','root','root');
     //本番環境
-    //$pdo = new PDO('mysql:dbname=gs_db3;charset=utf8;host=mysql743.db.sakura.ne.jp','waienu5','root2root');
+    $pdo = new PDO('mysql:dbname=gs_db3;charset=utf8;host=mysql743.db.sakura.ne.jp','waienu5','root2root');
     return $pdo;
   } catch (PDOException $e) {
     exit('DB Connection Error:'.$e->getMessage());
