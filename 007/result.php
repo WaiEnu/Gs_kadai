@@ -24,10 +24,7 @@ if($status==false) {
   //Selectデータの数だけ自動でループしてくれる
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php 
   $view .= "<table>";
-  /**while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<tr><td>".$result["id"]."</td><td>".$result["name"]."</td><td>".$result["naiyou"]."</td></tr>"; 
-  }
-  $view .= "</table>";*/
+  
   while( $result[] = $stmt->fetch(PDO::FETCH_ASSOC));
   $json=json_encode($result , JSON_UNESCAPED_UNICODE);
 }
