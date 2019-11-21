@@ -14,7 +14,7 @@ if($status==false) {
 }else{
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){ 
     $view .='<div>';
-    $view .="<p>".$r["id"]." | ".$r["name"]."</p>";
+    $view .="<p>".$r["name"]."</p>";
     $view .="<div><p>".$r["hitokoto"]."</p></div>";
     $view .="<p>".$r["date"]."</p>";
     $view .='<a href="delete_board.php?id='.$r["id"].'">';
@@ -42,9 +42,7 @@ if($status==false) {
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">謁見の間</a></div>
-      <div class="navbar-header"><span class="navbar-brand" href="select_board.php">一言一覧</span></div>
-      <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
-      <div class="navbar-header"><a class="navbar-brand" href="register.php">配下登録</a></div>
+      <div class="navbar-header"><span class="navbar-brand">一言一覧</span></div>
     </div>
   </nav>
 </header>

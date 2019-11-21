@@ -12,10 +12,7 @@
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="navbar-header"><a class="navbar-brand" href="select_board.php">謁見の間</a></div>
-      <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
-      <div class="navbar-header"><span class="navbar-brand">配下登録</span></div>
     </div>
   </nav>
 </header>
@@ -29,7 +26,9 @@
      <label>名前：<input type="text" name="name"></label><br>
      <label>Email：<input type="text" name="email"></label><br>
      <label>年齢：<input type="text" name="age"></label><br>
-     <label>自己PR：<textArea name="naiyou" rows="4" cols="40"></textArea></label><br>
+     <label>ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label><br>
+     <label>PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label><br>
+     <label><textArea name="naiyou" rows="4" cols="40"></textArea></label><br>
      <input type="submit" value="送信">
     </fieldset>
   </div>

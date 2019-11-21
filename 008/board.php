@@ -14,12 +14,11 @@ $name=$GET["name"];
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="navbar-header"><span class="navbar-brand" href="select_board.php">名前: <?=$name?></span></div>
+      <div class="navbar-header"><span class="navbar-brand">名前: <?=$name?></span></div>
+      <div class="navbar-header"><span class="navbar-brand" href="detail_mao.php">魔王の間</span></div>
       <div class="navbar-header"><span class="navbar-brand" href="select_board.php">謁見の間</span></div>
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
-      <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="register.php">配下登録</a></div>
-      <div class="navbar-header"><span class="navbar-brand" href="mao.php">魔王の間</span></div>
     </div>
   </nav>
 </header>
