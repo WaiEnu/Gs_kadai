@@ -28,9 +28,8 @@ if($status==false) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>配下一覧</title>
-  <link href="css/bootplus.min.css" rel="stylesheet" media="screen">
-  <link href="css/bootplus-responsive.min.css" rel="stylesheet" media="screen">
+  <title>配下一覧</title> 
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 <body id="main">
@@ -53,7 +52,5 @@ if($status==false) {
 </div>
 <!-- Main[End] -->
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

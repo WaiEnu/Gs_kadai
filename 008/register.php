@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>配下登録</title>
-  <link href="css/bootplus.min.css" rel="stylesheet" media="screen">
-  <link href="css/bootplus-responsive.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 <body>
@@ -37,7 +36,5 @@
 </form>
 <!-- Main[End] -->
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
