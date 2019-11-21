@@ -7,9 +7,17 @@
   <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 <body>
+<!-- Head[Start] -->
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header"><h1 class="navbar-brand">魔王の間</h1></div>
+    </div>
+  </nav>
+</header>
+<!-- Head[End] -->
 
 <!-- Main[Start] -->
-<h1>魔王の間</h1>
 <form method="POST" action="board.php">
   <div class="jumbotron">
    <fieldset>

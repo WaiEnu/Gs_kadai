@@ -39,7 +39,7 @@ if($status==false) {
     <div class="container-fluid">
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">謁見の間</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
-      <div class="navbar-header"><span>配下一覧</span></div>
+      <div class="navbar-header"><span class="navbar-brand" href="select.php">配下一覧</span></div>
       <div class="navbar-header"><a class="navbar-brand" href="register.php">配下登録</a></div>
     </div>
   </nav>

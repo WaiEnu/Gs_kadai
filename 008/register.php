@@ -15,7 +15,7 @@
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">謁見の間</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
       <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
-      <div class="navbar-header"><span>配下登録</span></div>
+      <div class="navbar-header"><span class="navbar-brand">配下登録</span></div>
     </div>
   </nav>
 </header>
