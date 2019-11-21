@@ -14,7 +14,8 @@
     <h1>生きることは選択の連続だーーー</h1>
     <div class="question">
       <h2>ミッション:ミジンコ君を生き残らせろ</h2>
-      <h3><span id="score">スコア:{{score}}</span>&nbsp;&nbsp;<span id="score">プレイヤー:{{name}}</span></h3>
+      <h3 id="score">プレイヤー:{{name}}</h3>
+      <h3 id="score">スコア:{{score}}</h3>
       <div class="message" v-if="isClear">
         <p><img src="image/game_clear.png" alt="クリア！"></p>
         <p>{{ question }}</p>
