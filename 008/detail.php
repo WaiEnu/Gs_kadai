@@ -21,8 +21,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>個別画面</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <title>配下個別画面</title>
+  <link href="css/bootplus.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootplus-responsive.min.css" rel="stylesheet" media="screen">
   <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 <body>
@@ -31,7 +32,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-    <div class="navbar-header"><a class="navbar-brand" href="select.php">データ一覧</a></div>
+      <div class="navbar-header"><a class="navbar-brand" href="select_board.php">謁見の間</a></div>
+      <div class="navbar-header"><a class="navbar-brand" href="select_board.php">一言一覧</a></div>
+      <div class="navbar-header"><a class="navbar-brand" href="select.php">配下一覧</a></div>
+      <div class="navbar-header"><a class="navbar-brand" href="register.php">配下登録</a></div>
     </div>
   </nav>
 </header>
@@ -41,7 +45,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <form method="POST" action="update.php">
   <div class="jumbotron">
    <fieldset>
-    <legend>フリーアンケート</legend>
+    <legend>配下</legend>
      <label>名前：<input type="text" name="name" value ="<?=$row["name"]?>"></label><br>
      <label>Email：<input type="text" name="email" value ="<?=$row["email"]?>"></label><br>
      <label>年齢：<input type="text" name="age" value ="<?=$row["age"]?>"></label><br>
@@ -51,8 +55,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     </fieldset>
   </div>
 </form>
+<div><a href="delete.php?id='<?=$row["id"]?>'">[粛清]</a></div>
 <!-- Main[End] -->
 
-
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
