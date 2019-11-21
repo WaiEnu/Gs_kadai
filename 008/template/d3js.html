@@ -1,0 +1,76 @@
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+const json =  JSON.parse('<?=$json?>',true);
+const data = format_json(json);
+const key = format_key(data);
+const index = format_index(data);
+
+// 一覧描画先
+var TABLE_ELEMENT_ID = '#result';
+var CALC_ELEMENT_ID = '#avarage';
+var GRAPH_ELEMENT_ID = '#graph';
+
+// 項目名：かな表記
+var COL_NAME = 'name';
+var COL_EMAIL = 'email';
+var COL_SCORE = 'score';
+var COL_DATE = 'indate';
+
+var base =100;
+
+var datasetX = [ 0,10,20,30,40,50,60,70,80,90,100,110,120 ];
+
+drawTable();
+rank();
+calc();
+
+/**
+ * データ一覧の描画
+ */
+function drawTable() {
+  var table = d3.select(TABLE_ELEMENT_ID).append('table')
+  var	thead = table.append('thead');
+  var thr = thead.append("tr");
+  for(k in key){
+    thr.append("th").text(key[k]);
+  }
+  var	tbody = table.append('tbody');       
+  var tr = tbody.selectAll('tr').data(data).enter().append('tr');
+  tr.append("td").attr("class", "rank");
+  tr.append("td").text(function (dataRow){return dataRow[COL_NAME];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_EMAIL];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_SCORE];});
+  tr.append("td").text(function (dataRow){return dataRow[COL_DATE];});
+}
+function calc(){
+  var average = d3.mean(data, function (d){return d.score;});
+  d3.select(CALC_ELEMENT_ID).append('div').attr("class", "chart").text('平均:'+  round(average));
+}
+function round(x){
+  return Math.round(x * base) / base;
+}
+function format_json(json){
+  var arr = new Array();
+  for (i in json){
+    if( json[i] ){ arr.push(json[i]); }
+  }
+  return arr;
+}
+function format_key(json){
+  var arr = Object.keys(json[0]);
+  arr.splice(0, 1, 'rank');
+  return arr;
+}
+function format_index(json){
+  var arr = Object.keys(json);
+  return arr;
+}
+function rank(){
+  $(TABLE_ELEMENT_ID+' table td.rank').each(function(i){
+    $(this).html((i+1));
+  });
+}
+</script>
