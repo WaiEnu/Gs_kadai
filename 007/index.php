@@ -4,11 +4,9 @@
 ?>
 <div id="app">
   <div v-if="isInit">
-    <form action="input.php" method="post">
-      <div>お名前: <input type="text" v-model="name"></div>
-      <div>EMAIL: <input type="text" v-model="email"></div>
-          <button type="button" @click="start">始める</button>
-    </form>
+    <div>お名前: <input type="text" v-model="name"></div>
+    <div>EMAIL: <input type="text" v-model="email"></div>
+    <button type="button" @click="start">始める</button>
   </div>
   <div v-else>
     <h1>生きることは選択の連続だーーー</h1>
