@@ -1,5 +1,26 @@
 <?php
  include("funcs.php");
+/**
+ //1.  DB接続します
+ $pdo =  db_conn();
+ 
+ //２．データ登録SQL作成
+ $stmt = $pdo->prepare("SELECT * FROM sng_question_table ORDER BY score DESC, indate DESC");
+ $status = $stmt->execute();
+ 
+ //３．データ表示
+ $view="";
+ if($status==false) {
+   //execute（SQL実行時にエラーがある場合）
+   sql_error($stmt);
+ 
+ }else{
+   //Selectデータの数だけ自動でループしてくれる
+   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
+   while( $result[] = $stmt->fetch(PDO::FETCH_ASSOC));
+   $json=json_encode($result , JSON_UNESCAPED_UNICODE);
+ }
+  */
  include("template/header.html");
 ?>
 <div id="app">
@@ -16,7 +37,7 @@
       <h3 id="score">スコア:{{score}}</h3>
       <div class="message" v-if="isClear">
         <p><img src="image/game_clear.png" alt="クリア！"></p>
-        <p>{{ question }}</p>
+        <p>{{ endMessage }}</p>
       </div>
       <div class="message" v-if="isGameOver">
         <p><img src="image/mijinko_kun_is_dead.png" alt="ミジンコ君(死亡)"></p>
@@ -43,7 +64,7 @@
           <button type="button" @click="continueNo">no</button>
         </div>
         <div class="form" v-if="isClear">
-          <button v-for="(item, i) in option" :key="item" type="button" @click="continueNo">{{ item }}</button>
+          <button type="button" @click="continueNo">{{endOption}}</button>
         </div>
         <div class="form" v-if="hasNext">
           <button v-for="(item, i) in option" :key="item" type="button" @click="quizSet(i)">{{ item }}</button>
