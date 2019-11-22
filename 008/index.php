@@ -30,7 +30,9 @@ if($status==false) {
 include("template/header.html");
 ?>
 <div class="wrapper">
+
 <div id="deta"><?=$view?></div>
+
 </div>
 <?php
 include("template/footer.html");
