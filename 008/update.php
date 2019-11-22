@@ -3,13 +3,14 @@ include("template/funcs.php");
 
 //1. POSTデータ取得
 $id = $_POST["id"];
-$hensin = $_POST["hensin"];
+$hensin = h($_POST["hensin"]);
 
 //2. DB接続します
 $pdo = db_conn();
 
 //３．データ更新SQL作成
-$stmt = $pdo->prepare("UPDATE sng_question_table SET hensin=:hensin, indate=sysdate() WHERE id=:id");
+$sql = "UPDATE sng_question_table SET hensin=:hensin, indate=sysdate() WHERE id=:id";
+$stmt = $pdo->prepare($sql);
 $stmt->bindValue(':hensin', $hensin, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute(); //実行
