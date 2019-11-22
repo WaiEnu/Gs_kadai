@@ -17,23 +17,30 @@ if($status==false) {
   //Selectデータの数だけ自動でループしてくれる
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-    $view .='<div>';
-      $view .='<div>id：'.$row["id"].'</div>';
-      $view .='<div>場所：'.$row["location"].'</div>';
-      $view .='<div>日時：'.$row["wdate"].'</div>';
-      $view .='<div>詳細：<div>'.$r["naiyou"].'</div></div>';
-      $view .='<a href="detail.php?id='.$r["id"].'">"詳細"</a>';
-    $view .='</div>';
+    $view .='<div class="postText">';
+      $view .='<h3>id：'.$row["id"].'</h3>';
+      $view .='<h3>日時：'.$row["wdate"].'</h3>';
+      $view .='<h3>場所：'.$row["location"].'</h3>';
+      $view .='<div class="message">';
+        $view .='<h3>詳細：'.$row["wdate"].'</h3>';
+        $view .='<div>'.$r["naiyou"].'</div>';
+      $view .='</div><!--.message-->';
+      $view .='<div class="input_ctrl">';
+      $view .='<a href="detail.php?id='.$r["id"].'">"編集"</a>';
+      $view .='</div><!--.input_ctrl-->';
+    $view .='</div><!--.postText-->';
   }
 }
 
 include("template/header.html");
 ?>
-<div class="wrapper">
-  <div id="deta">
-    <?=$view?>
-  </div>
-</div>
+<section id="boad" class="output_wrapper">
+  <article>
+    <div class="output">
+      <?=$view?>
+    </div>
+  </article>
+</section>
 <?php
 include("template/footer.html");
 ?>
