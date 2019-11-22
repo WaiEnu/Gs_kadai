@@ -4,7 +4,7 @@ include("template/funcs.php");
 $pdo =  db_conn();
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("SELECT * FROM sng_question_table ORDER BY score DESC, indate DESC LIMIT 10");
+$stmt = $pdo->prepare("SELECT * FROM sng_question_table ORDER BY wdate DESC");
 $status = $stmt->execute();
 
 //３．データ表示
