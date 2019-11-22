@@ -27,7 +27,7 @@ if($status==false) {
         $view .='<div>'.$r["naiyou"].'</div>';
       $view .='</div><!--.message-->';
       $view .='<div class="input_ctrl">';
-      $view .='<a href="detail.php?id='.$r["id"].'">"編集"</a>';
+        $view .='<a href="detail.php?id='.$r["id"].'">"編集"</a>';
       $view .='</div><!--.input_ctrl-->';
     $view .='</div><!--.postText-->';
   }
