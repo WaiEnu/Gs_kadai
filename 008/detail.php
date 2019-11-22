@@ -43,7 +43,7 @@ include("template/header.html");
             <input type="hidden" name="id" value ="<?=$row["id"]?>">
             <div><input type="submit" value="送信" <?=$disabled?>></div>
           </fieldset>
-          <div><a href="delete.php?id='<?=$r["id"]?>'">[削除]</a></div>
+          <div><a href="delete.php?id='<?=$row["id"]?>'">[削除]</a></div>
         </div>
       </form>
     </div>
