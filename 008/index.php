@@ -44,7 +44,8 @@ include("template/header.html");
           <fieldset>
             <div><label for="location">場所：<input type="text" name="location"></label></div>
             <div><label for="wdate">日時:<input type="date" name="wdate" value="2019-10-08" min="2019-10-08" max="2119-10-08"></label></div>
-            <div><label for="naiyou">詳細：<textarea type="text" name="naiyou" ></textarea></label></div>
+            <div><label for="naiyou">詳細：</label></div>
+            <div><textarea type="text" name="naiyou" ></textarea></div>
             <div><input type="submit" value="送信"></div>
           </fieldset>
         </div>

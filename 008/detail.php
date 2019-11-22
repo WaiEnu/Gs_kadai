@@ -38,9 +38,10 @@ include("template/header.html");
             }
           ?>
           <fieldset>
-            <label for="hensin"><textarea type="text" name="hensin" <?=$disabled?>><?=$row["hensin"]?></textarea></label>
+            <div><label for="hensin">返信：</label></div>
+            <div><textarea type="text" name="hensin" <?=$disabled?>><?=$row["hensin"]?></textarea></div>
             <input type="hidden" name="id" value ="<?=$row["id"]?>">
-            <input type="submit" value="送信" <?=$disabled?>>
+            <div><input type="submit" value="送信" <?=$disabled?>></div>
           </fieldset>
           <div><a href="delete.php?id='<?=$r["id"]?>'">[削除]</a></div>
         </div>
