@@ -14,10 +14,11 @@ if($status==false) {
   sql_error($stmt);
 
 }else{
+  $view ='<div class="postText">NoPost</div><!--.postText-->';
   //Selectデータの数だけ自動でループしてくれる
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
-  while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-    $view .='<div class="postText">';
+  while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){
+    $view ='<div class="postText">';
       $view .='<h3>id：'.$row["id"].'</h3>';
       $view .='<h3>日時：'.$row["wdate"].'</h3>';
       $view .='<h3>場所：'.$row["location"].'</h3>';
