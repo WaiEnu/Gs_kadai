@@ -1,11 +1,11 @@
 <?php
-include("template/funcs.php");
+include("funcs.php");
 
 //1. POSTデータ取得
 //$name = filter_input( INPUT_GET, ","name" ); //こういうのもあるよ
 //$email = filter_input( INPUT_POST, "email" ); //こういうのもあるよ
-$name = $_POST["location"];
-$email = $_POST["wdate"];
+$location = $_POST["location"];
+$wdate = $_POST["wdate"];
 $naiyou = $_POST["naiyou"];
 
 //2. DB接続します

@@ -3,7 +3,7 @@ include("template/funcs.php");
 
 //1. POSTデータ取得
 $id = $_POST["id"];
-$age = $_POST["hensin"];
+$hensin = $_POST["hensin"];
 
 //2. DB接続します
 $pdo = db_conn();

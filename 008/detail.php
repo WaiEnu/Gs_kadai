@@ -1,5 +1,5 @@
 <?php
-include("template/funcs.php");
+include("funcs.php");
 
 $id = $_GET["id"];
 

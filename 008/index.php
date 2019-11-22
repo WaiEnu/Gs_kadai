@@ -1,5 +1,5 @@
 <?php
-include("template/funcs.php");
+include("funcs.php");
 //1.  DB接続します
 $pdo =  db_conn();
 
@@ -35,6 +35,22 @@ if($status==false) {
 
 include("template/header.html");
 ?>
+<section>
+  <article>
+    <div id="input">
+      <form method="POST" action="insert.php">
+        <div class="jumbotron">
+          <fieldset>
+            <div><label for="location">場所：<input type="text" name="location"></label></div>
+            <div><label for="wdate">日時:<input type="text" name="wdate"></label></div>
+            <div><label for="naiyou">詳細：<input type="text" name="naiyou"></label></div>
+            <div><input type="submit" value="送信"></div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </article>
+</section>
 <section id="boad" class="output_wrapper">
   <article>
     <div class="output">
