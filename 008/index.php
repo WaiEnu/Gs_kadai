@@ -15,11 +15,11 @@ if($status==false) {
   sql_error($stmt);
 
 }else{
-  $view ='<div class="postText">NoPost</div><!--.postText-->';
+  $view ='';
   //Selectデータの数だけ自動でループしてくれる
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view ='<div class="postText">';
+    $view .='<div class="postText">';
       $view .='<h3>id：'.$r["id"].'</h3>';
       $view .='<p><span>日時：</span>'.$r["wdate"].'</p>';
       $view .='<p><span>場所：</span>'.$r["location"].'</p>';
@@ -27,9 +27,13 @@ if($status==false) {
       $view .='<div class="message">';
         $view .='<div>'.$r["naiyou"].'</div>';
       $view .='</div><!--.message-->';
-      $view .='<div class="input_ctrl">';
-        $view .='<a href="detail.php?id='.$r["id"].'">[編集]</a>';
-      $view .='</div><!--.input_ctrl-->';
+    if($r["henshin"]){ 
+      $view .='<p><span>返信：</span></p>';
+      $view .='<div class="message">';
+        $view .='<div>'.$r["henshin"].'</div>';
+      $view .='</div><!--.message-->';
+    }
+      $view .='<p><a href="detail.php?id='.$r["id"].'">[編集]</a></p>';
     $view .='</div><!--.postText-->';
   }
 }
@@ -42,8 +46,8 @@ include("template/header.html");
       <form method="POST" action="insert.php">
         <div class="jumbotron">
           <fieldset>
-            <div><label for="location">場所：<input type="text" name="location"></label></div>
             <div><label for="wdate">日時：<input type="date" name="wdate" value="2019-10-08" min="2019-10-08" max="2119-10-08"></label></div>
+            <div><label for="location">場所：<input type="text" name="location"></label></div>
             <div><label for="naiyou">詳細：</label></div>
             <div><textarea type="text" rows="3" name="naiyou" ></textarea></div>
             <div><input type="submit" value="送信"></div>

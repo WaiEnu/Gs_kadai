@@ -33,7 +33,6 @@ section{
   margin: 0 auto;
   background: burlywood;
   min-height: 50vh;
-  height: 100%;
 }
 article {
   display: flex;
@@ -58,8 +57,8 @@ article .postText{
 article .postText{
   border: 1px solid gray;
 }
-article .postText .message{
-  height: 5em;
+article .message{
+  height:5em;
   word-break: break-all;
   overflow: scroll;
   background: #fff;
@@ -75,7 +74,7 @@ article .postText h3{
   font-weight: bold;
 }
 article #input{
-  margin: 24px auto;
+  margin: 0 auto;
 }
 article .output{
   width: 100%;
@@ -86,9 +85,10 @@ article .btn{
   text-align: center;
 }
 form{
-  width: calc(100% - 8px);
+  width: 100%;
 }
 form div.jumbotron{
+  width: 100%;
   padding:0;
 }
 form div{
