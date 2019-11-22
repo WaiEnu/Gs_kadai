@@ -20,17 +20,22 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 include("template/header.html");
 ?>
 <!-- Main[Start] -->
-<form method="POST" action="insert.php">
-  <div class="jumbotron">
-    <fieldset>
-     <label for="location"><input type="text" name="location"></label>
-     <label for="wdate"><input type="text" name="wdate"></label>
-     <label for="naiyou"><input type="text" name="naiyou"></label>
-     <label for="hensin"><input type="text" name="hensin"></label>
-     <input type="submit" value="送信">
-    </fieldset>
-  </div>
-</form>
+<section>
+  <article>
+    <div id="input">
+      <form method="POST" action="insert.php">
+        <div class="jumbotron">
+          <fieldset>
+            <div><label for="location">場所：<input type="text" name="location"></label></div>
+            <div><label for="wdate">日時:<input type="text" name="wdate"></label></div>
+            <div><label for="naiyou">詳細：<input type="text" name="naiyou"></label></div>
+            <div><input type="submit" value="送信"></div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </article>
+</section>
 <!-- Main[End] -->
 
 <?php include("template/footer.html"); ?>
