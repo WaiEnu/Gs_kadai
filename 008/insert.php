@@ -15,6 +15,7 @@ $naiyou = h($_POST["naiyou"]);
 $pdo =  db_conn();
 
 //３．データ登録SQL作成
+//$sql = "INSERT INTO sng_taxsonomy_table(location, wdate, naiyou ,indate)VALUES(:location,:wdate,:naiyou,sysdate())";
 $sql = "INSERT INTO sng_question_table(location, wdate, naiyou ,indate)VALUES(:location,:wdate,:naiyou,sysdate())";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':location', $location, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)

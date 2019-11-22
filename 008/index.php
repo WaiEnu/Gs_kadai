@@ -31,6 +31,7 @@ if($status==false) {
       $view .='<p><span>返信：</span></p>';
       $view .='<div class="message">';
         $view .='<div>'.$r["henshin"].'</div>';
+        //$view .='<div>'.$r["class"].$r["order"].$r["genus"].$r["species"].'</div>';
       $view .='</div><!--.message-->';
     }
       $view .='<p><a href="detail.php?id='.$r["id"].'">[編集]</a></p>';
