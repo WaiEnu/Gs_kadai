@@ -20,15 +20,15 @@ if($status==false) {
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php   
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){
     $view ='<div class="postText">';
-      $view .='<h3>id：'.$row["id"].'</h3>';
-      $view .='<h3>日時：'.$row["wdate"].'</h3>';
-      $view .='<h3>場所：'.$row["location"].'</h3>';
+      $view .='<h3>id：'.$r["id"].'</h3>';
+      $view .='<p><span>日時：</span>'.$r["wdate"].'</p>';
+      $view .='<p><span>場所：</span>'.$r["location"].'</p>';
+      $view .='<p><span>詳細：</span></p>';
       $view .='<div class="message">';
-        $view .='<h3>詳細：'.$row["wdate"].'</h3>';
         $view .='<div>'.$r["naiyou"].'</div>';
       $view .='</div><!--.message-->';
       $view .='<div class="input_ctrl">';
-        $view .='<a href="detail.php?id='.$r["id"].'">"編集"</a>';
+        $view .='<a href="detail.php?id='.$r["id"].'">[編集]</a>';
       $view .='</div><!--.input_ctrl-->';
     $view .='</div><!--.postText-->';
   }
@@ -44,7 +44,7 @@ include("template/header.html");
           <fieldset>
             <div><label for="location">場所：<input type="text" name="location"></label></div>
             <div><label for="wdate">日時:<input type="date" name="wdate" value="2019-10-08" min="2019-10-08" max="2119-10-08"></label></div>
-            <div><label for="naiyou">詳細：<input type="text" name="naiyou"></label></div>
+            <div><label for="naiyou">詳細：<textarea type="text" name="naiyou" ></textarea></label></div>
             <div><input type="submit" value="送信"></div>
           </fieldset>
         </div>

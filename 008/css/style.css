@@ -36,13 +36,11 @@ article .postText h3,
 article .postText p{
   box-sizing: border-box;
   width: 100%;
-  margin: 0;
-  padding: 8px 8px 8px 0;
-}
-article .postText h3{
-  box-sizing: border-box;
   margin: 8px 0;
   padding: 0;
+}
+article .postText h3{
+  font-weight: bold;
 }
 article #input{
   margin: 24px auto;
