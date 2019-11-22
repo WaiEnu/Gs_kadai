@@ -31,7 +31,7 @@ include("template/header.html");
       if($knr_flg===1&&$row["hensin"]===""){
     ?>
     <fieldset>
-     <label for="hensin"><input type="text" name="kingdom"><?=$row["hensin"]?></label>
+     <label for="hensin"><input type="text" name="hensin"><?=$row["hensin"]?></label>
      <input type="hidden" name="id" value ="<?=$row["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
