@@ -5,10 +5,14 @@ body{
   background: rgb(175, 175, 174);
   height: 100%;
 }
+header {
+  background: #e0e2e2;
+  padding: 16px 0;
+}
 header ul li {
   list-style: none;
   display: inline-block;
-  padding: 0 4px;
+  padding: 0 8px;
 }
 main{
   width: 100%;
