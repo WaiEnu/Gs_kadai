@@ -42,7 +42,7 @@ include("template/header.html");
         <div class="jumbotron">
           <fieldset>
             <div><label for="location">場所：<input type="text" name="location"></label></div>
-            <div><label for="wdate">日時:<input type="date" name="wdate" value="yyyy/mm/dd" min="2019/10/08" max="2119/10/08"></label></div>
+            <div><label for="wdate">日時:<input type="date" name="wdate" value="2019/10/08" min="2019/10/08" max="2119/10/08"></label></div>
             <div><label for="naiyou">詳細：<input type="text" name="naiyou"></label></div>
             <div><input type="submit" value="送信"></div>
           </fieldset>
