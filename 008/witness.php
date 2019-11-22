@@ -27,7 +27,6 @@ include("template/header.html");
      <label for="wdate"><input type="text" name="wdate"></label>
      <label for="naiyou"><input type="text" name="naiyou"></label>
      <label for="hensin"><input type="text" name="hensin"></label>
-     <input type="hidden" name="id" value ="<?=$row["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
   </div>
