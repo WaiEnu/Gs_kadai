@@ -22,15 +22,32 @@ include("template/header.html");
 <!-- Main[Start] -->
 <form method="POST" action="update.php">
   <div class="jumbotron">
-   <fieldset>
-    <legend>フリーアンケート</legend>
-     <label>名前：<input type="text" name="name" value ="<?=$row["name"]?>"></label><br>
-     <label>Email：<input type="text" name="email" value ="<?=$row["email"]?>"></label><br>
-     <label>年齢：<input type="text" name="age" value ="<?=$row["age"]?>"></label><br>
-     <label><textArea name="naiyou" rows="4" cols="40"><?=$row["naiyou"]?></textArea></label><br>
+    <div>id：<?=$row["id"]?></div>
+    <div>場所：<?=$row["location"]?></div>
+    <div>日時：<?=$row["wdate"]?></div>
+    <div>詳細：<div ><?=$row["naiyou"]?></div></div>
+    <?php
+      $knr_flg=1;
+      if($knr_flg===1&&$row["hensin"]===""){
+    ?>
+    <fieldset>
+     <label for="hensin"><input type="text" name="kingdom"><?=$row["hensin"]?></label>
      <input type="hidden" name="id" value ="<?=$row["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
+    <?php
+      }else{
+    ?>
+    <div><?=$row["hensin"]?></div>
+    <?php
+      }
+
+      if($knr_flg===1){
+    ?>
+    <a href="delete.php?id='<?=$r["id"]?>'">[削除]</a>
+    <?php
+      }
+    ?>
   </div>
 </form>
 <!-- Main[End] -->

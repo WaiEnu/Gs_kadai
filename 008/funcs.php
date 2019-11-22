@@ -29,5 +29,4 @@ function redirect($file_name){
   exit();
 }
 
-
 ?>

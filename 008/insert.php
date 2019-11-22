@@ -4,19 +4,18 @@ include("funcs.php");
 //1. POSTデータ取得
 //$name = filter_input( INPUT_GET, ","name" ); //こういうのもあるよ
 //$email = filter_input( INPUT_POST, "email" ); //こういうのもあるよ
-$name = h($_POST["name"]);
-$email = h($_POST["email"]);
-$naiyou = h($_POST["score"]);
+$name = $_POST["location"];
+$email = $_POST["wdate"];
+$naiyou = $_POST["naiyou"];
 
 //2. DB接続します
 $pdo =  db_conn();
 
 //３．データ登録SQL作成
-$sql = "INSERT INTO sng_score_table(name,email,score,indate)VALUES(:name,:email,:score,sysdate())";
-$stmt = $pdo->prepare($sql);
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':email', $email, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':score', $naiyou, PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
+$sql = "INSERT INTO sng_question_table(location, wdate, naiyou ,indate)VALUES(:location,:wdate,:naiyou,sysdate())";
+$stmt->bindValue(':location', $location, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':wdate', $wdate, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':naiyou', $naiyou, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute();//実行
 
 //４．データ登録処理後
