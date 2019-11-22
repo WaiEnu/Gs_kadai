@@ -86,7 +86,6 @@ main{
   align-items: center;
 }
 section{
-  height: 100vh;
   display: flex;
   margin: 0 auto;
   padding: 32px 0;
