@@ -1,5 +1,5 @@
 <?php
-include("funcs.php");
+include("template/funcs.php");
 //1.  DB接続します
 $pdo =  db_conn();
 

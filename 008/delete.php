@@ -1,5 +1,5 @@
 <?php
-include("funcs.php");
+include("template/funcs.php");
 
 //1. POSTデータ取得
 $id = $_GET["id"];

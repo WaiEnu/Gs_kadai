@@ -1,5 +1,5 @@
 <?php
-include("funcs.php");
+include("template/funcs.php");
 
 $id = $_GET["id"];
 
@@ -35,16 +35,11 @@ include("template/header.html");
      <input type="hidden" name="id" value ="<?=$row["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
+    <div><a href="delete.php?id='<?=$r["id"]?>'">[削除]</a></div>
     <?php
       }else{
     ?>
     <div><?=$row["hensin"]?></div>
-    <?php
-      }
-
-      if($knr_flg===1){
-    ?>
-    <a href="delete.php?id='<?=$r["id"]?>'">[削除]</a>
     <?php
       }
     ?>

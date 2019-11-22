@@ -1,5 +1,5 @@
 <?php
-include("funcs.php");
+include("template/funcs.php");
 
 //1. POSTデータ取得
 //$name = filter_input( INPUT_GET, ","name" ); //こういうのもあるよ
@@ -24,6 +24,6 @@ if($status==false){
   sql_error($stmt);
 }else{
   //５．index.phpへリダイレクト
-  redirect("result.php");
+  redirect("index.php");
 }
 ?>
