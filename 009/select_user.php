@@ -24,17 +24,17 @@ if($status==false) {
       $view .='<p><span>名前：</span>'.$r["name"].'</p>';
       $view .='<p><span>ID：</span>'.$r["lid"].'</p>';
       $view .='<p><span>PASS：</span>******</p>';
-      if($r["kanri_flg"]==="1"){
-        $view .='<p>[管理者]</p>';
-      }else{
-        $view .='<p>[一般]</p>';
-      }
-      if($_SESSION["kanri_flg"]==="1"){
+    if($r["kanri_flg"]==="1"){
+      $view .='<p>[管理者]</p>';
+    }else{
+      $view .='<p>[一般]</p>';
+    }
+    if($_SESSION["kanri_flg"]==="1"){
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
     }
-      if($_SESSION["mao_flg"]==="1"){
-        $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
-      }
+    if($_SESSION["mao_flg"]==="1"){
+      $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
+    }
     $view .='</div><!--.postText-->';
   }
 }
