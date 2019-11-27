@@ -38,6 +38,10 @@ if($status==false) {
 
 include("template/header.php");
 ?>
+
+<?php
+if($_SESSION["mao_flg"]==="0"){
+?>
 <section>
   <article>
     <div id="input">
@@ -54,6 +58,9 @@ include("template/header.php");
     </div>
   </article>
 </section>
+<?php
+}
+?>
 <section id="boad" class="output_wrapper">
   <article>
     <div class="output">
