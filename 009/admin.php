@@ -25,12 +25,6 @@ if($status==false){
 $val = $stmt->fetch();         //1レコードだけ取得する方法
 //$count = $stmt->fetchColumn(); //SELECT COUNT(*)で使用可能()
 
-  var_dump($val["id"]);
-  var_dump($val["name"]);
-  var_dump($val["kanri_flg"]);
-  var_dump($val["mao_flg"]);
-  var_dump(isset($val["id"]));
-
 //5. 該当レコードがあればSESSIONに値を代入
 //* if(password_verify($lpw, $val["lpw"])){
 if(isset($val["id"])){

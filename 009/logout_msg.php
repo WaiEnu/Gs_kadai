@@ -1,9 +1,9 @@
 <?php
 include("funcs.php");
+include("template/init_header.html");
 ?>
-
 <header>
-  <nav class="navbar navbar-default">LOGIN</nav>
+  <nav class="navbar navbar-default"><a class="navbar-brand" href="index.php">LOGIN</a></nav>
 </header>
 
 <section>

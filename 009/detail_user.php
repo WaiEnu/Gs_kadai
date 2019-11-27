@@ -27,17 +27,17 @@ include("template/header.php");
       <form method="POST" action="update_user.php">
         <div class="jumbotron">
           <fieldset>
-            <div><label for="henshin">返信：</label></div>
-            <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
+            <div><label for="name">名前：<input type="text" name="name" value ="<?=$row["name"]?>"></label></div>
             <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
             <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
             <div>
             <?php
             $options ='';
-            if($row["kanri_flg"]===1){
-              $options .='<select name="user_options"><option value="1" selected>[管理者]</option><option value="2">[一般]</option></select>';
+            var_dump($row["kanri_flg"]);
+            if($row["kanri_flg"]==="1"){
+              $options ='<select name="user_options"><option value="1" selected>[管理者]</option><option value="2">[一般]</option></select>';
             }else{ 
-              $options .='<select name="user_options"><option value="1">[管理者]</option><option value="2" selected>[一般]</option></select>';
+              $options ='<select name="user_options"><option value="1">[管理者]</option><option value="2" selected>[一般]</option></select>';
             }
             echo $options
             ?>

@@ -4,7 +4,7 @@ include("funcs.php");
 $pdo =  db_conn();
 
 //２．データ登録SQL作成
-$sql = "SELECT * FROM sng_user_table WHERE life_flg = 0 ORDER BY id DESC";
+$sql = "SELECT * FROM sng_user_table WHERE life_flg = 0 AND mao_flg = 0 ORDER BY id DESC";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
@@ -26,13 +26,13 @@ if($status==false) {
       $view .='<p><span>PASS：</span>******</p>';
       if($r["mao_flg"]===1){
         $view .='<p>[魔王]</p>';
-      }else if($r["kanri_flg"]===1){
+      }else if($r["kanri_flg"]==="1"){
         $view .='<p>[管理者]</p>';
       }else{
         $view .='<p>[一般]</p>';
       }
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
-      if($_SESSION["mao_flg"]===1){
+      if($_SESSION["mao_flg"]==="1"){
         $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
       }
     $view .='</div><!--.postText-->';
@@ -43,26 +43,26 @@ include("template/header.php");
 ?>
 <section>
   <article>
+<?php
+$options ='';
+var_dump($row["mao_flg"]);
+if($row["mao_flg"]==="1"){
+?>
     <div id="input">
-      <form method="POST" action="insert_user.php">
-        <div class="jumbotron">
-          <fieldset>
-            <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
-            <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
-            <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
-            <div>
-              <select name="user_options">
-              <option value="1">[管理者]</option>
-              <option value="2" selected>[一般]</option>
-              </select>
-            </div>
-            <div><input type="submit" value="送信" ></div>
-          </fieldset>
-        </div>
-      </form>
+      <a href="register_user.php">配下登録</a>
     </div>
+<?php
+}else{
+?>
+<div class="postText">
+  <h3><a href="detail_mao.php">[魔王]</a></h3>
+</div><!--.postText-->
+<?php
+}
+?>
   </article>
 </section>
+
 <section id="boad" class="output_wrapper">
   <article>
     <div class="output">

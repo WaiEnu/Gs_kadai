@@ -1,7 +1,7 @@
 <?php
 include("funcs.php");
+include("template/init_header.html");
 ?>
-
 <header>
   <nav class="navbar navbar-default">LOGIN</nav>
 </header>
