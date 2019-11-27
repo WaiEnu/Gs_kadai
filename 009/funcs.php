@@ -29,9 +29,9 @@ function redirect($file_name){
   exit();
 }
 
-
 //リダイレクト: redirect($file_name)
 function redirect_s($file_name){
   header("Location: ".$file_name);
 }
+
 ?>
