@@ -8,7 +8,7 @@
 </head>
 <header>
     <?php
-      if($_SESSION["name"]!==""){
+      if($_SESSION["name"]){
     ?>
   <ul>
     <li><a href="hall.php">謁見の間</a></li>
