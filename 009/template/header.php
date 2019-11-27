@@ -7,19 +7,27 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <header>
-  <ul>
-    <li><a href="index.php">目撃情報</a></li>
-    <li><a href="login.php">ログイン</a></li>
     <?php
-      $knr_flg=$_SESSION["kanri_flg"];
-      if($knr_flg===1){
+      if($_SESSION["name"]!==""){
     ?>
-    <li><a href="select_user.php">ユーザー一覧</a></li>
+  <ul>
+    <li><a href="hall.php">謁見の間</a></li>
     <li><a class="navbar-brand" href="logout.php">ログアウト</a></li>
+    <?php
+      if($_SESSION["kanri_flg"]===1){
+    ?>
+    <li><a href="select_user.php">配下一覧</a></li>
     <?php
     }
     ?>
   </ul>
+    <?php
+    }else{
+    ?>
+    <nav class="navbar navbar-default">LOGIN</nav>
+    <?php
+    }
+    ?>
 </header>
 
 <main>

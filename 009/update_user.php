@@ -12,7 +12,7 @@ $life_flg = h($_POST["life_flg"]);
 $pdo = db_conn();
 
 //３．データ更新SQL作成
-$sql = "UPDATE sng_user_table SET name=:name, lid=:lid, lpwd=:lpwd, kanri_flg=:kanri_flg, life_flg=:life_flg";
+$sql = "UPDATE sng_user_table SET name=:name, lid=:lid, lpwd=:lpwd, kanri_flg=0, life_flg=1";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':lid', $lid, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
@@ -25,7 +25,7 @@ $status = $stmt->execute();//実行
 if($status==false){
   sql_error($stmt);
 }else{
-  redirect("index.php");
+  redirect("hall.php");
 }
 
 ?>

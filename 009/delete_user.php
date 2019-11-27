@@ -8,7 +8,7 @@ $id = $_GET["id"];
 $pdo = db_conn();
 
 //３．データ更新SQL作成
-$sql = "DELETE FROM sng_user_table WHERE id=:id";
+$sql = "UPDATE sng_user_table SET life_flg=0 WHERE id=:id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute(); //実行
@@ -17,6 +17,6 @@ $status = $stmt->execute(); //実行
 if($status==false){
     sql_error($stmt);
   }else{
-    redirect("index.php");
+    redirect("hall.php");
   }
 ?>

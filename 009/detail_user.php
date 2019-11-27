@@ -31,8 +31,14 @@ include("template/header.php");
             <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
             <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
             <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
+            <?php
+            if($_SESSION["mao_flg"]===1){
+            ?>
             <div><label for="kanri_flg">管理フラグ：<input type="text" name="kanri_flg" value ="<?=$row["kanri_flg"]?>"></label></div>
             <div><label for="life_flg">状態フラグ：<input type="text" name="life_flg" value ="<?=$row["life_flg"]?>"></label></div>
+            <?php
+            }
+            ?>
             <input type="hidden" name="id" value ="<?=$row["id"]?>">
             <div><input type="submit" value="送信" ></div>
           </fieldset>

@@ -28,7 +28,9 @@ if($status==false) {
       $view .='<p><span>状態フラグ：</span>'.$r["life_flg"].'</p>';
       $view .='<p><span>詳細：</span>'.$r["location"].'</p>';
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
-      $view .='<a href="delete_user.php?id='.$r["id"].'">[削除]</a></p>';
+      if($_SESSION["mao_flg"]===1){
+        $view .='<a href="delete_user.php?id='.$r["id"].'">[削除]</a></p>';
+      }
     $view .='</div><!--.postText-->';
   }
 }

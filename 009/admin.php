@@ -1,4 +1,6 @@
 <?php
+ include("funcs.php");
+ 
 //最初にSESSIONを開始！！ココ大事！！
 session_start();
 
@@ -34,10 +36,10 @@ if( $val["id"] != "" ){
   $_SESSION["chk_ssid"]  = session_id();
   $_SESSION["kanri_flg"] = $val['kanri_flg'];
   $_SESSION["name"]      = $val['name'];
-  redirect("index.php");
+  redirect_s("hall.php");
 }else{
   //Login失敗時(Logout経由)
-  redirect("logout.php");
+  redirect_s("logout.php");
 }
 
 exit();

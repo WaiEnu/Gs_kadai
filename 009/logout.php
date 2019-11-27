@@ -1,4 +1,6 @@
 <?php
+ include("funcs.php");
+ 
 //必ずsession_startは最初に記述
 session_start();
 
@@ -14,7 +16,7 @@ if (isset($_COOKIE[session_name()])) { //session_name()は、セッションID�
 session_destroy();
 
 //処理後、index.phpへリダイレクト
-header("Location: login.php");
+redirect_s("logout_msg.php");
 exit();
 
 ?>

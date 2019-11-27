@@ -32,6 +32,6 @@ if($status==false){
   sql_error($stmt);
 }else{
   //５．index.phpへリダイレクト
-  redirect("index.php");
+  redirect("hall.php");
 }
 ?>
