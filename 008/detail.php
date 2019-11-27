@@ -42,6 +42,7 @@ include("template/header.html");
             <div><input type="submit" value="送信" ></div>
           </fieldset>
           <?php
+          //include('')
           }else{
           ?>
             <div>返信：</div>

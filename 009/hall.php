@@ -1,10 +1,13 @@
 <?php
 include("funcs.php");
+
+$flg = session_start();
+
 //1.  DB接続します
 $pdo =  db_conn();
 
 //２．データ登録SQL作成
-$sql = "SELECT * FROM sng_question_table ORDER BY wdate DESC";
+$sql = "SELECT * FROM sng_question_table ORDER BY indate DESC";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
@@ -21,25 +24,23 @@ if($status==false) {
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){
     $view .='<div class="postText">';
       $view .='<h3>id：'.$r["id"].'</h3>';
-      $view .='<p><span>日時：</span>'.$r["wdate"].'</p>';
-      $view .='<p><span>場所：</span>'.$r["location"].'</p>';
-      $view .='<p><span>詳細：</span></p>';
+      $view .='<h3><span>name：</span>'.$r["name"].'</h3>';
+      $view .='<p><span>date：</span>'.$r["indate"].'</p>';
       $view .='<div class="message">';
         $view .='<div>'.$r["naiyou"].'</div>';
       $view .='</div><!--.message-->';
-    if($r["henshin"]){ 
-      $view .='<p><span>返信：</span></p>';
-      $view .='<div class="message">';
-        $view .='<div>'.$r["henshin"].'</div>';
-        //$view .='<div>'.$r["class"].$r["order"].$r["genus"].$r["species"].'</div>';
-      $view .='</div><!--.message-->';
+    if($_SESSION["mao_flg"]==="1"){
+      $view .='<p><a href="delete.php?id='.$r["id"].'">[粛清]</a></p>';
     }
-      $view .='<p><a href="detail.php?id='.$r["id"].'">[編集]</a></p>';
     $view .='</div><!--.postText-->';
   }
 }
 
-include("template/header.html");
+include("template/header.php");
+?>
+
+<?php
+if($_SESSION["mao_flg"]==="0"){
 ?>
 <section>
   <article>
@@ -47,8 +48,7 @@ include("template/header.html");
       <form method="POST" action="insert.php">
         <div class="jumbotron">
           <fieldset>
-            <div><label for="wdate">日時：<input type="date" name="wdate" value="2019-10-08" min="2019-10-08" max="2119-10-08"></label></div>
-            <div><label for="location">場所：<input type="text" name="location"></label></div>
+            <div><label for="name">名前：<input type="text" name="name" value="<?=$_SESSION["name"]?>"></label></div>
             <div><label for="naiyou">詳細：</label></div>
             <div><textarea type="text" rows="3" name="naiyou" ></textarea></div>
             <div><input type="submit" value="送信"></div>
@@ -58,6 +58,9 @@ include("template/header.html");
     </div>
   </article>
 </section>
+<?php
+}
+?>
 <section id="boad" class="output_wrapper">
   <article>
     <div class="output">
