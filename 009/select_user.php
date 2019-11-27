@@ -1,5 +1,8 @@
 <?php
 include("funcs.php");
+
+$flg = session_start();
+
 //1.  DB接続します
 $pdo =  db_conn();
 
@@ -39,8 +42,6 @@ if($status==false) {
   }
 }
 
-$flg = session_start();
-
 include("template/header.php");
 ?>
 <section>
@@ -48,6 +49,7 @@ include("template/header.php");
 <?php
 $options ='';
 var_dump($_SESSION["mao_flg"]);
+var_dump($_SESSION["kanri_flg"]);
 if($_SESSION["mao_flg"]==="1"){
 ?>
     <div id="input">

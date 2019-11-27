@@ -1,5 +1,8 @@
 <?php
 include("funcs.php");
+
+$flg = session_start();
+
 //1.  DB接続します
 $pdo =  db_conn();
 
@@ -32,8 +35,6 @@ if($status==false) {
     $view .='</div><!--.postText-->';
   }
 }
-
-$flg = session_start();
 
 include("template/header.php");
 ?>

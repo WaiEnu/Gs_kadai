@@ -1,6 +1,8 @@
 <?php
 include("funcs.php");
 
+$flg = session_start();
+
 $id = $_GET["id"];
 
 $pdo = db_conn();
@@ -17,8 +19,6 @@ if($status==false) {
   sql_error($stmt);
 }
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-$flg = session_start();
 
 include("template/header.php");
 ?>
