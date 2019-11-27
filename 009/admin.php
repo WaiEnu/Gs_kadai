@@ -10,7 +10,6 @@ $lpwd = h($_POST["lpwd"]);
 
 
 //1.  DB接続します
-include("funcs.php");
 $pdo = db_conn();
 
 //2. データ登録SQL作成
