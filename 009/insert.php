@@ -4,7 +4,7 @@ include("funcs.php");
 //1. POSTデータ取得
 //$name = filter_input( INPUT_GET, ","name" ); //こういうのもあるよ
 //$email = filter_input( INPUT_POST, "email" ); //こういうのもあるよ
-$location = h($_POST["name"]);
+$name = h($_POST["name"]);
 $naiyou = h($_POST["naiyou"]);
 
 //2. DB接続します
