@@ -31,14 +31,17 @@ include("template/header.php");
             <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
             <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
             <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
+            <div>
             <?php
-            if($_SESSION["mao_flg"]===1){
-            ?>
-            <div><label for="kanri_flg">管理フラグ：<input type="text" name="kanri_flg" value ="<?=$row["kanri_flg"]?>"></label></div>
-            <div><label for="life_flg">状態フラグ：<input type="text" name="life_flg" value ="<?=$row["life_flg"]?>"></label></div>
-            <?php
+            $options ='';
+            if($row["kanri_flg"]===1){
+              $options .='<select name="user_options"><option value="1" selected>[管理者]</option><option value="2">[一般]</option></select>';
+            }else{ 
+              $options .='<select name="user_options"><option value="1">[管理者]</option><option value="2" selected>[一般]</option></select>';
             }
+            echo $options
             ?>
+            </div>
             <input type="hidden" name="id" value ="<?=$row["id"]?>">
             <div><input type="submit" value="送信" ></div>
           </fieldset>

@@ -14,7 +14,7 @@
     <li><a href="hall.php">魔王の間</a></li>
     <li><a class="navbar-brand" href="logout.php">ログアウト</a></li>
     <?php
-      if($_SESSION["kanri_flg"]===1){
+      if($_SESSION["mao_flg"]===1){
     ?>
     <li><a href="select_user.php">配下一覧</a></li>
     <?php

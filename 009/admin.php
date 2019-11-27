@@ -34,6 +34,7 @@ if( $val["id"] != "" ){
   //Login成功時
   $_SESSION["chk_ssid"]  = session_id();
   $_SESSION["kanri_flg"] = $val['kanri_flg'];
+  $_SESSION["mao_flg"] = $val['mao_flg'];
   $_SESSION["name"]      = $val['name'];
   redirect_s("hall.php");
 }else{

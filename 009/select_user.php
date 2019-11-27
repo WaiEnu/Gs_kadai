@@ -4,7 +4,7 @@ include("funcs.php");
 $pdo =  db_conn();
 
 //２．データ登録SQL作成
-$sql = "SELECT * FROM sng_user_table WHERE mao_flg = 0 ORDER BY id DESC";
+$sql = "SELECT * FROM sng_user_table WHERE life_flg = 0 ORDER BY id DESC";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
@@ -24,9 +24,13 @@ if($status==false) {
       $view .='<p><span>名前：</span>'.$r["name"].'</p>';
       $view .='<p><span>ID：</span>'.$r["lid"].'</p>';
       $view .='<p><span>PASS：</span>******</p>';
-      $view .='<p><span>管理フラグ：</span>'.$r["kanri_flg"].'</p>';
-      $view .='<p><span>状態フラグ：</span>'.$r["life_flg"].'</p>';
-      $view .='<p><span>詳細：</span>'.$r["location"].'</p>';
+      if($r["mao_flg"]===1){
+        $view .='<p>[魔王]</p>';
+      }else if($r["kanri_flg"]===1){
+        $view .='<p>[管理者]</p>';
+      }else{
+        $view .='<p>[一般]</p>';
+      }
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
       if($_SESSION["mao_flg"]===1){
         $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
@@ -46,8 +50,12 @@ include("template/header.php");
             <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
             <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
             <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
-            <div><label for="kanri_flg">管理フラグ：<input type="text" name="kanri_flg" value ="<?=$row["kanri_flg"]?>"></label></div>
-            <div><label for="life_flg">状態フラグ：<input type="text" name="life_flg" value ="<?=$row["life_flg"]?>"></label></div>
+            <div>
+              <select name="user_options">
+              <option value="1">[管理者]</option>
+              <option value="2" selected>[一般]</option>
+              </select>
+            </div>
             <div><input type="submit" value="送信" ></div>
           </fieldset>
         </div>

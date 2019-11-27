@@ -5,8 +5,14 @@ include("funcs.php");
 $name = h($_POST["name"]);
 $lid = h($_POST["lid"]);
 $lpwd = h($_POST["lpwd"]);
-$kanri_flg = h($_POST["kanri_flg"]);
-$life_flg = h($_POST["life_flg"]);
+$user_options = h($_POST["user_options"]);
+$kanri_flg = null;
+$life_flg = 0;
+if($user_options===1){
+  $kanri_flg = 1;
+}else{
+  $kanri_flg = 0;
+}
 
 //2. DB接続します
 $pdo = db_conn();
