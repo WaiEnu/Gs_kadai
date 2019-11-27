@@ -29,7 +29,7 @@ if($status==false) {
       $view .='<div class="message">';
         $view .='<div>'.$r["naiyou"].'</div>';
       $view .='</div><!--.message-->';
-    if($_SESSION["mao_flg"]===1){
+    if($_SESSION["mao_flg"]==="1"){
       $view .='<p><a href="delete.php?id='.$r["id"].'">[粛清]</a></p>';
     }
     $view .='</div><!--.postText-->';
