@@ -18,6 +18,8 @@ if($status==false) {
 }
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+$flg = session_start();
+
 include("template/header.php");
 ?>
 <!-- Main[Start] -->

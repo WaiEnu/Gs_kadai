@@ -33,6 +33,8 @@ if($status==false) {
   }
 }
 
+$flg = session_start();
+
 include("template/header.php");
 ?>
 <section>

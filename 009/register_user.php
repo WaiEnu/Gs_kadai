@@ -1,8 +1,10 @@
 <?php
 include("funcs.php");
-include("template/header.html");
-?>
 
+$flg = session_start();
+
+include("template/header.php");
+?>
 <section>
   <article>
     <div id="input">
