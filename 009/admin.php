@@ -1,6 +1,6 @@
 <?php
- include("funcs.php");
- 
+include("funcs.php");
+
 //最初にSESSIONを開始！！ココ大事！！
 session_start();
 
@@ -22,7 +22,7 @@ $status = $stmt->execute();
 
 //3. SQL実行時にエラーがある場合STOP
 if($status==false){
-    sql_error();
+  sql_error();
 }
 
 //4. 抽出データ数を取得

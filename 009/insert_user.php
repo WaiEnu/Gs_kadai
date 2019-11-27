@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST["location"]);
+var_dump($_POST["lid"]);
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 include("funcs.php");

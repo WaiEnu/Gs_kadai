@@ -4,7 +4,7 @@ include("funcs.php");
 $pdo =  db_conn();
 
 //２．データ登録SQL作成
-$sql = "SELECT * FROM sng_user_table ORDER BY wdate DESC";
+$sql = "SELECT * FROM sng_user_table WHERE mao_flg = 0 ORDER BY id DESC";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
@@ -29,7 +29,7 @@ if($status==false) {
       $view .='<p><span>詳細：</span>'.$r["location"].'</p>';
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
       if($_SESSION["mao_flg"]===1){
-        $view .='<a href="delete_user.php?id='.$r["id"].'">[削除]</a></p>';
+        $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
       }
     $view .='</div><!--.postText-->';
   }
