@@ -41,7 +41,7 @@ include("template/header.php");
       <form method="POST" action="insert.php">
         <div class="jumbotron">
           <fieldset>
-            <div><label for="name">名前：<input type="text" name="name"></label></div>
+            <div><label for="name">名前：<input type="text" name="name" value="<?=$_SESSION["name"]?>"></label></div>
             <div><label for="naiyou">詳細：</label></div>
             <div><textarea type="text" rows="3" name="naiyou" ></textarea></div>
             <div><input type="submit" value="送信"></div>

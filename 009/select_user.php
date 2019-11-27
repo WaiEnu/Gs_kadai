@@ -24,14 +24,14 @@ if($status==false) {
       $view .='<p><span>名前：</span>'.$r["name"].'</p>';
       $view .='<p><span>ID：</span>'.$r["lid"].'</p>';
       $view .='<p><span>PASS：</span>******</p>';
-      if($r["mao_flg"]===1){
-        $view .='<p>[魔王]</p>';
-      }else if($r["kanri_flg"]==="1"){
+      if($r["kanri_flg"]==="1"){
         $view .='<p>[管理者]</p>';
       }else{
         $view .='<p>[一般]</p>';
       }
+      if($_SESSION["kanri_flg"]==="1"){
       $view .='<p><a href="detail_user.php?id='.$r["id"].'">[編集]</a>　';
+    }
       if($_SESSION["mao_flg"]==="1"){
         $view .='<a href="delete_user.php?id='.$r["id"].'">[粛清]</a></p>';
       }
@@ -45,8 +45,8 @@ include("template/header.php");
   <article>
 <?php
 $options ='';
-var_dump($row["mao_flg"]);
-if($row["mao_flg"]==="1"){
+var_dump($_SESSION["mao_flg"]);
+if($_SESSION["mao_flg"]==="1"){
 ?>
     <div id="input">
       <a href="register_user.php">配下登録</a>

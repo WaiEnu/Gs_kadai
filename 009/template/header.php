@@ -8,6 +8,7 @@
 </head>
 <header>
   <ul>
+    <li> ログイン:<?=$_SESSION["name"]?></li>
     <li><a href="hall.php">魔王の間</a></li>
     <li><a href="select_user.php">配下一覧</a></li>
     <li><a class="navbar-brand" href="logout.php">ログアウト</a></li>
