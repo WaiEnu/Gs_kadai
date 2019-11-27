@@ -8,18 +8,12 @@
 </head>
 <header>
     <?php
-      if($_SESSION["name"]){
+      if($_SESSION["life_flg"] === 0 ){
     ?>
   <ul>
     <li><a href="hall.php">魔王の間</a></li>
-    <li><a class="navbar-brand" href="logout.php">ログアウト</a></li>
-    <?php
-      if($_SESSION["mao_flg"]===1){
-    ?>
     <li><a href="select_user.php">配下一覧</a></li>
-    <?php
-    }
-    ?>
+    <li><a class="navbar-brand" href="logout.php">ログアウト</a></li>
   </ul>
     <?php
     }else{
