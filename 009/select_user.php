@@ -47,9 +47,6 @@ include("template/header.php");
 <section>
   <article>
 <?php
-$options ='';
-var_dump($_SESSION["mao_flg"]);
-var_dump($_SESSION["kanri_flg"]);
 if($_SESSION["mao_flg"]==="1"){
 ?>
     <div id="input">
