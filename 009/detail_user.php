@@ -45,7 +45,7 @@ include("template/header.php");
             </div>
             <input type="hidden" name="id" value ="<?=$row["id"]?>">
             <?php
-            if($row["mao_flg"]==="1"){
+            if($_SESSION["mao_flg"]==="1"){
             ?>
             <div><input type="submit" value="送信" ></div>
             <?php

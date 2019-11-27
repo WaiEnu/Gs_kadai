@@ -11,7 +11,7 @@ include("template/header.php");
       <form method="POST" action="insert_user.php">
         <div class="jumbotron">
           <fieldset>
-            <div><label for="name">名前：<input type="text" name="id" value ="<?=$row["id"]?>"></label></div>
+            <div><label for="name">名前：<input type="text" name="name" value ="<?=$row["name"]?>"></label></div>
             <div><label for="lid">ID：<input type="text" name="lid" value ="<?=$row["lid"]?>"></label></div>
             <div><label for="lpwd">PASS：<input type="text" name="lpwd" value ="<?=$row["lpwd"]?>"></label></div>
             <div>
