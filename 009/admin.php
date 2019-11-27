@@ -13,10 +13,10 @@ $lpwd = h($_POST["lpwd"]);
 $pdo = db_conn();
 
 //2. データ登録SQL作成
-$sql = "SELECT * FROM sng_user_table WHERE lid = :lid";
+$sql = "SELECT * FROM sng_user_table WHERE lid = :lid AND lpwd = :lpwd";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':lid', $lid PDO::PARAM_STR);
-$stmt->bindValue(':lpw', $lpwd PDO::PARAM_STR); //* Hash化する場合はコメントする
+$stmt->bindValue(':lpwd', $lpwd PDO::PARAM_STR); //* Hash化する場合はコメントする
 $status = $stmt->execute();
 
 //3. SQL実行時にエラーがある場合STOP

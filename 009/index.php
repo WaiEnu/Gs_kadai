@@ -1,6 +1,6 @@
 <?php
- include("funcs.php");
- include("template/header.php");
+include("funcs.php");
+include("template/header.php");
 ?>
 
 <section>

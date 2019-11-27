@@ -4,18 +4,16 @@ include("funcs.php");
 //1. POSTデータ取得
 //$name = filter_input( INPUT_GET, ","name" ); //こういうのもあるよ
 //$email = filter_input( INPUT_POST, "email" ); //こういうのもあるよ
-$location = h($_POST["location"]);
-$wdate = h($_POST["wdate"]);
+$location = h($_POST["name"]);
 $naiyou = h($_POST["naiyou"]);
 
 //2. DB接続します
 $pdo =  db_conn();
 
 //３．データ登録SQL作成
-$sql = "INSERT INTO sng_question_table(location, wdate, naiyou ,indate)VALUES(:location,:wdate,:naiyou,sysdate())";
+$sql = "INSERT INTO sng_question_table(name, naiyou ,indate)VALUES(:name,:naiyou,sysdate())";
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':location', $location, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':wdate', $wdate, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':name', $name, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':naiyou', $naiyou, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute();//実行
 
