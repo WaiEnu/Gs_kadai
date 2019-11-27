@@ -1,0 +1,115 @@
+html{
+  height: 100%;
+}
+body{
+  background: rgb(175, 175, 174);
+  height: 100%;
+}
+header {
+  background: #e0e2e2;
+  padding: 16px 0;
+}
+header ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 8px;
+}
+main{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+section{
+  display: flex;
+  margin: 0 auto;
+  padding: 32px 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.output_wrapper{
+  margin: 0 auto;
+  background: burlywood;
+  min-height: 50vh;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 8px;
+  width: 400px;
+}
+#boad article {
+  margin-bottom: 8px;
+}
+article #input,
+article .postText{
+  box-sizing: border-box;
+  width: calc(100% - 16px);
+  margin: 0 auto 24px;
+  padding:8px;
+  background: cornsilk;
+}
+article .postText{
+  border: 1px solid gray;
+}
+article .message{
+  height:5em;
+  word-break: break-all;
+  overflow: scroll;
+  background: #fff;
+}
+article .postText h3,
+article .postText p{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px 0;
+  padding: 0;
+}
+article .postText h3{
+  font-weight: bold;
+}
+article #input{
+  margin: 0 auto;
+}
+article .output{
+  width: 100%;
+}
+article .btn{
+  width: calc(100% - 8px);
+  padding:4px;
+  text-align: center;
+}
+form{
+  width: 100%;
+}
+form div.jumbotron{
+  width: 100%;
+  padding:0;
+}
+form div{
+  width: calc(100% - 8px);
+  padding:4px;
+}
+form label{
+  display: block;
+  width: 100%;
+}
+form input[type="text"]{
+  width: calc(100% - 5em);
+}
+form textarea{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.input_ctrl{
+  width: 100%;
+  padding:0 0 8px;
+  color: blue;
+  cursor : pointer;
+}
