@@ -25,15 +25,20 @@ if($status==false){
 $val = $stmt->fetch();         //1レコードだけ取得する方法
 //$count = $stmt->fetchColumn(); //SELECT COUNT(*)で使用可能()
 
+  var_dump($val["id"]);
+  var_dump($val["name"]);
+  var_dump($val["kanri_flg"]);
+  var_dump($val["mao_flg"]);
+  var_dump(isset($val["id"]));
+
 //5. 該当レコードがあればSESSIONに値を代入
 //* if(password_verify($lpw, $val["lpw"])){
-if( $val["id"] != "" ){
+if(isset($val["id"])){
   //Login成功時
   $_SESSION["chk_ssid"]  = session_id();
   $_SESSION["kanri_flg"] = $val['kanri_flg'];
-  $_SESSION["life_flg"] = $val['life_flg'];
   $_SESSION["mao_flg"] = $val['mao_flg'];
-  $_SESSION["name"]      = $val['name'];
+  $_SESSION["name"] = $val['name'];
   redirect_s("hall.php");
 }else{
   //Login失敗時(Logout経由)
