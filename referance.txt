@@ -90,9 +90,24 @@ references
     - 物理シミュレーション環境構築用HTML5フレームワーク「physics.js」 http://www.natural-science.or.jp/physics.js/physics.js_r14/index.html
     - CSS、canvas、SVGで円周上をアニメーションさせる方法 https://liginc.co.jp/web/html-css/html/175526/2
     - http://www.maroon.dti.ne.jp/lance/js/canvas/orbit2.html
-- 課題6 (http://waienu5.sakura.ne.jp/006/)
+- 課題6 (http://waienu5.sakura.ne.jp/006/index.php)
   - クイズ
-    - https://www.webprofessional.jp/simple-javascript-quiz/
     - http://www.shurey.com/js/craft/quiz/index.html
-    - https://codepen.io/piyamarco/pen/XbXENW
-- 課題7 ()
+- 課題7 (http://waienu5.sakura.ne.jp/007/index.php)
+  - chart.js 
+  - D3.js　JSONデータを読み込む https://qiita.com/Takeshi-Uchida/items/0891695be92084f3963f
+  - MySQL 5.7で対応したJSONデータ型の使い方まとめ https://www.webprofessional.jp/use-json-data-fields-mysql-databases/
+  - Vue.js で json を読み込む https://qiita.com/Hiroyuki1993/items/56e4b0c15786bf8d787b
+  - Excelによる進化シミュレーション http://www2.toyo.ac.jp/~asahi/education/soron/shiryo/programing/language/excel/genetic/index.html
+- 課題8 (http://waienu5.sakura.ne.jp/008/index.php)
+- 課題9 (http://waienu5.sakura.ne.jp/009/index.php)
+- PHP選手権 (Valert：)
+  - 入力値検証
+    - 正規表現
+  - ロジスティック方程式 https://math.keicode.com/calculus/differential-equations-logistic-equation.php
+  - 人口増加の微分方程式 (マルサスモデル) https://math.keicode.com/calculus/differential-equations-population-growth.php
+  - フィボナッチ数列を求める際のアルゴリズム http://note.onichannn.net/archives/2203
+  - 自然対数の累乗を取得 - exp() https://webkaru.net/php/function-exp/
+- Lalavel
+  - Laravel入門 - 使い方チュートリアル https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d
+  - LaravelとVue.jsでクイズアプリを作った話 https://qiita.com/kgkgon/items/c83d52f966020ee3be79
