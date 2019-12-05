@@ -17,13 +17,6 @@ references
     - https://www.jungleocean.com/programming/190201jquery-slick
     - https://pera-lab.com/archives/2827
     - https://getbootstrap.com/docs/4.0/examples/
-- 課題2 (http://waienu5.sakura.ne.jp/002/janken/janken_tpl.html)
-  - じゃんけん
-    - じゃんけんゲームを作りながら覚えるHTML&JavaScript https://qiita.com/tsuyopon_xyz/items/ed2e244da8225eb31b68
-    - じゃんけんの勝敗判定のアルゴリズム: https://qiita.com/mpyw/items/3ffaac0f1b4a7713c869
-    - https://myx.skr.jp/game0.html
-    - 【JavaScript】変数と定数の宣言（var, let, constの違い)【自己学習】 : 　https://qiita.com/OXIIVIA/items/05b4d8d644660c7f95bf
-    - はじめよう！スプライトアニメーション https://qiita.com/nekoneko-wanwan/items/b0e64404a5cff582247a
 - 課題3 (http://waienu5.sakura.ne.jp/003/memo/index.html)
   - https://qiita.com/tojimasan/items/b7f01aa1bbf1acd5a95e
   - http://programming-blues.hatenablog.com/entry/MemoApp
@@ -71,6 +64,13 @@ references
     - chatbot
     - https://redturtle44.sakura.ne.jp/assignment/index.html
 - 課題5 (http://waienu5.sakura.ne.jp/005/mapAPI/)
+  - 課題2 (http://waienu5.sakura.ne.jp/002/janken/janken_tpl.html)
+    - じゃんけん
+      - じゃんけんゲームを作りながら覚えるHTML&JavaScript https://qiita.com/tsuyopon_xyz/items/ed2e244da8225eb31b68
+      - じゃんけんの勝敗判定のアルゴリズム: https://qiita.com/mpyw/items/3ffaac0f1b4a7713c869
+      - https://myx.skr.jp/game0.html
+      - 【JavaScript】変数と定数の宣言（var, let, constの違い)【自己学習】 : 　https://qiita.com/OXIIVIA/items/05b4d8d644660c7f95bf
+      - はじめよう！スプライトアニメーション https://qiita.com/nekoneko-wanwan/items/b0e64404a5cff582247a
   - 地図
     - 公園検索
     - UMA目撃情報
@@ -101,13 +101,23 @@ references
   - Excelによる進化シミュレーション http://www2.toyo.ac.jp/~asahi/education/soron/shiryo/programing/language/excel/genetic/index.html
 - 課題8 (http://waienu5.sakura.ne.jp/008/index.php)
 - 課題9 (http://waienu5.sakura.ne.jp/009/index.php)
-- PHP選手権 (Valert：)
-  - 入力値検証
-    - 正規表現
-  - ロジスティック方程式 https://math.keicode.com/calculus/differential-equations-logistic-equation.php
+- PHP選手権 (Valert：http://waienu5.sakura.ne.jp/009_php_final/index.html)
   - 人口増加の微分方程式 (マルサスモデル) https://math.keicode.com/calculus/differential-equations-population-growth.php
+  - ロジスティック方程式 https://math.keicode.com/calculus/differential-equations-logistic-equation.php
   - フィボナッチ数列を求める際のアルゴリズム http://note.onichannn.net/archives/2203
-  - 自然対数の累乗を取得 - exp() https://webkaru.net/php/function-exp/
-- Lalavel
+  - sankou
+    - D3グラフ
+      - http://fnwiya.hatenablog.com/entry/2016/01/24/204528
+      - http://deep-blend.com/jp/2014/05/d3-js-basic6-line-chart/
+    - 自然対数の累乗を取得
+      - exp() https://webkaru.net/php/function-exp/
+    - 入力値検証
+      - 正規表現
+    - ajax
+      - https://www.sria.co.jp/blog/2014/10/lets-use-ajax-part-two-ajax-json-and-php-together-try/
+      - https://uxmilk.jp/8797
+      - https://qiita.com/super2baba/items/b1301ca567b60b2e00c7
+      - https://bonokara.com/jquery-php-ajax1/#toc7
+- Laravel
   - Laravel入門 - 使い方チュートリアル https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d
   - LaravelとVue.jsでクイズアプリを作った話 https://qiita.com/kgkgon/items/c83d52f966020ee3be79
