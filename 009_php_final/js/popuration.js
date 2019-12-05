@@ -78,38 +78,38 @@ function drawLine(dataset, xAxisMax, yAxisMax) {
 
       // line表示。 
       svg.append("path")
-        .datum(data)
-        .attr("class", "line")
-        .attr("stroke", function(d){ return color; })
-        .attr("stroke-width", "2px")
-        .attr("fill", "none")
-        .attr("d", line)
-        .append("text")
-        .attr("y", -10)
-        .attr("x",10)
-        .style("text-anchor", "end")
-        .text(label);
+         .datum(data)
+         .attr("class", "line")
+         .attr("stroke", function(d){ return color; })
+         .attr("stroke-width", "2px")
+         .attr("fill", "none")
+         .attr("d", line)
+         .append("text")
+         .attr("y", -10)
+         .attr("x",10)
+         .style("text-anchor", "end")
+         .text(label);
     }
   }
 
   svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-      .append("text")
-      .attr("y", -10)
-      .attr("x",10)
-      .style("text-anchor", "end")
-      .text("人口");
+     .attr("class", "y axis")
+     .call(yAxis)
+     .append("text")
+     .attr("y", -10)
+     .attr("x",10)
+     .style("text-anchor", "end")
+     .text("人口");
 
   svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-      .append("text")
-      .attr("y", 0)
-      .attr("x",width+20)
-      .style("text-anchor", "end")
-      .text("時間");   
+     .attr("class", "x axis")
+     .attr("transform", "translate(0," + height + ")")
+     .call(xAxis)
+     .append("text")
+     .attr("y", 0)
+     .attr("x",width+20)
+     .style("text-anchor", "end")
+     .text("時間");   
 }
 
 function init(){
