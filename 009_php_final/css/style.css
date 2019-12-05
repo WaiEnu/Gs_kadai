@@ -2,9 +2,6 @@
   font: 10px sans-serif;
 }
 .axis path.domain {
-  /*
-  fillとopacityで半透明な背景色。
-  */
   fill: Aquamarine;
   opacity: 0.05;
   stroke: #000;
@@ -16,20 +13,33 @@
   stroke-width: 1;
   shape-rendering: crispEdges;
 }
+#app{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 0;
+  padding: 16px 0 0 0;
+}
 .jumbotron {
-  max-width: 400px;
-  padding: 16px 16px 8px 40px;
+  width: 400px;
+  margin-top: 30px;
+  padding: 0 8px 8px 40px;
   box-sizing: border-box;
 }
 label{
-  margin: 0 0 4px;
-  display: inline-block;
   width: 100%;
+  display: inline-block;
+  margin: 0 0 4px;
 }
-#app{
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+#disp{
+  width: 400px;
+  padding: 0 0 0 0;
+}
+@media screen and (max-width:399px) {
+  #disp,
+  .jumbotron {
+    width: 100%;
+  }
 }
