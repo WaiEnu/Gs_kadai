@@ -1,0 +1,21 @@
+{
+  "name"              : "V alert",
+  "short_name"        : "V alert",
+  "start_url"         : "./",
+  "display"           : "standalone",
+  "orientation"       : "any",
+  "background_color"  : "#ACE",
+  "theme_color"       : "#ACE",
+  "icons": [
+        {
+          "src"           : "./img/Valert192.png",
+          "sizes"         : "192x192",
+          "type"          : "image/png"
+        },
+        {
+          "src"           : "./img/Valert512.png",
+          "sizes"         : "512x512",
+          "type"          : "image/png"
+        }
+    ]
+}
