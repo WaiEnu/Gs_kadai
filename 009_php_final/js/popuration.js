@@ -4,7 +4,7 @@ const init_w = 100;
 const init_h = 100;
 const $time_init = "10";
 const $initial_init = "10";
-const $growth_rate_init = "1";
+const $growth_rate_init = "0.999";
 const $capacity_init = "100";
 const $time = $("#time");
 const $initial = $("#initial");
@@ -76,17 +76,6 @@ function drawLine(dataset, xAxisMax, yAxisMax) {
       var data = dataset[i][1];
       var color = d3.rgb(colorArr[i]);
 
-/**
-      svg.selectAll("circle")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("r",5)
-        .attr("fill", function(d){ return color; })
-        .attr("cx", function(d){ return xScale(d["time"]); })
-        .attr("cy", function(d){ return yScale(d["rate"]); });
-**/
-
       // line表示。 
       svg.append("path")
         .datum(data)
@@ -94,7 +83,12 @@ function drawLine(dataset, xAxisMax, yAxisMax) {
         .attr("stroke", function(d){ return color; })
         .attr("stroke-width", "2px")
         .attr("fill", "none")
-        .attr("d", line);
+        .attr("d", line)
+        .append("text")
+        .attr("y", -10)
+        .attr("x",10)
+        .style("text-anchor", "end")
+        .text(label);
     }
   }
 
