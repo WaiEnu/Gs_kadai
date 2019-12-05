@@ -17,12 +17,19 @@
   shape-rendering: crispEdges;
 }
 .jumbotron {
-  max-width: 440px;
-  margin: 16px 16px 0px 40px;
+  max-width: 400px;
+  padding: 16px 16px 8px 40px;
   box-sizing: border-box;
 }
 label{
   margin: 0 0 4px;
   display: inline-block;
   width: 100%;
+}
+#app{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }

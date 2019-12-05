@@ -33,7 +33,7 @@ function drawLine(dataset, xAxisMax, yAxisMax) {
   d3.select("svg").remove();
 
   var margin = {top: 30, right: 20, bottom: 30, left: 40},
-      width = 500 - margin.left - margin.right,
+      width = 400 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
   var svg = d3.select(disp).append("svg")
