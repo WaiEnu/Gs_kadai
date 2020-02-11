@@ -56,7 +56,7 @@ input[type="text"] {
 .canvas{
   width: 100%;
   height: auto;
-  margin: 16px auto 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -65,26 +65,26 @@ input[type="text"] {
 }
 .canvas #disp{
   position: relative;
-  margin: 8px auto 16px;
+  margin:  6px auto 32px;
   padding: 0;
   width: 800px;
-  height: 500px;
+  height: 432px;
+}
+.canvas canvas{
+  position: absolute;
 }
 .canvas canvas#nzone_disp{
-  position: absolute;
   top:30px;
   left:200px;
   background: #1d0956;
 }
 .canvas canvas#orbit_disp{
-  position: absolute;
   top:30px;
   left:0;
   background: transparent;
 }
 .canvas canvas#planet_disp{
-  position: absolute;
-  top:0px;
+  top:0;
   left:0;
   background: transparent;
 }
